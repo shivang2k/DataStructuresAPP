@@ -1,19 +1,25 @@
 package com.shway.datastructures;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 
+import com.protectsoft.webviewcode.Codeview;
+import com.protectsoft.webviewcode.Settings;
+
 public class CCardView {
 
-    public View listItem(String txt, String head, Context context, int resID)
+    public View listItem(String txt, String head,int resID, Context context)
     {
-       // CardView cv = makeCardView(context);
         ImageView iv = new ImageView(context);
         LinearLayout ll = new LinearLayout(context);
         ll.setOrientation(LinearLayout.VERTICAL);
@@ -21,29 +27,39 @@ public class CCardView {
 
         final int VALUE_IN_DP_10 = (int)(10 * context.getResources().getDisplayMetrics().density);
 
-        ll.addView(cTextViews.normalText(head, context));
-        ll.addView(cTextViews.normalText(txt, context));
-        ll.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10);
+        ll.addView(cTextViews.cardHead(head, context));
+        ll.addView(cTextViews.cardText(txt, context));
+        ll.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10, 0);
 
         iv.setImageResource(resID);
-        iv.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.gravity = Gravity.CENTER;
+        iv.setLayoutParams(lp);
 
+        iv.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
         linearLayout.addView(iv);
         linearLayout.addView(ll);
-
+        TypedValue outValue = new TypedValue();
+        context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
+        linearLayout.setBackgroundResource(outValue.resourceId);
         return linearLayout;
     }
 
 
     public View listItemMulti(Context context, String...a)
     {
+        final int VALUE_IN_DP_8 = (int)(8 * context.getResources().getDisplayMetrics().density);
+        final int VALUE_IN_DP_10 = (int)(10 * context.getResources().getDisplayMetrics().density);
+        final int VALUE_IN_DP_16 = (int)(16 * context.getResources().getDisplayMetrics().density);
         CardView cv = makeCardView(context);
 
         LinearLayout ll = new LinearLayout(context);
         ll.setOrientation(LinearLayout.HORIZONTAL);
+
 
         for(String x : a)
         {
@@ -56,6 +72,12 @@ public class CCardView {
             ll.addView(tv);
         }
         cv.addView(ll);
+        cv.setPadding(0, VALUE_IN_DP_8, 0, VALUE_IN_DP_8);
+        LinearLayout.LayoutParams cardViewParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        cv.setLayoutParams(cardViewParams);
+        ViewGroup.MarginLayoutParams cardViewMarginParams = (ViewGroup.MarginLayoutParams) cv.getLayoutParams();
+        cardViewMarginParams.setMargins(0, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
+        cv.requestLayout();
         return cv;
     }
 
@@ -64,11 +86,33 @@ public class CCardView {
         final int VALUE_IN_DP_8 = (int)(8 * context.getResources().getDisplayMetrics().density);
         final int VALUE_IN_DP_10 = (int)(10 * context.getResources().getDisplayMetrics().density);
         final int VALUE_IN_DP_16 = (int)(16 * context.getResources().getDisplayMetrics().density);
+
+
         CardView cv = new CardView(context);
         cv.setRadius(VALUE_IN_DP_8);
         cv.setPadding(VALUE_IN_DP_10,VALUE_IN_DP_10,VALUE_IN_DP_10, VALUE_IN_DP_10);
         cv.setContentPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10);
+
+        LinearLayout.LayoutParams cardViewParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        cv.setLayoutParams(cardViewParams);
+        ViewGroup.MarginLayoutParams cardViewMarginParams = (ViewGroup.MarginLayoutParams) cv.getLayoutParams();
+        cardViewMarginParams.setMargins(0, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
+        cv.requestLayout();
+
         return cv;
+    }
+
+    public View Code(Context context, String code)
+    {
+        WebView wv = new WebView(context);
+        wv.setBackgroundColor(Color.parseColor("#2b2b2b"));
+        Codeview.with(context)
+                .withCode(code)
+                .setStyle(Settings.WithStyle.DARKULA)
+                .setLang(Settings.Lang.CPLUSPLUS)
+                .into(wv);
+
+        return wv;
     }
 
 }

@@ -17,11 +17,353 @@
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_structures"
+            app:destination="@id/structures"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_linkedList"
+            app:destination="@id/linkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_stack"
+            app:destination="@id/stack"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_queue"
+            app:destination="@id/queue"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_hashTable"
+            app:destination="@id/hashTable"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_graphs"
+            app:destination="@id/graphs"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_heap"
+            app:destination="@id/heap"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_nav_home_to_trees"
+            app:destination="@id/trees"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/arrayIntro"
         android:name="com.shway.datastructures.ArrayIntro"
         android:label="fragment_array_intro"
-        tools:layout="@layout/fragment_array_intro" />
-
+        tools:layout="@layout/fragment_array_intro" >
+        <action
+            android:id="@+id/action_arrayIntro_to_arrayOperations"
+            app:destination="@id/arrayOperations"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_a_to_ase"
+            app:destination="@id/arraySearch"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_a_to_asort"
+            app:destination="@id/arraySort"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/arrayOperations"
+        android:name="com.shway.datastructures.ArrayOperations"
+        android:label="fragment_array_operations"
+        tools:layout="@layout/fragment_array_operations" />
+    <fragment
+        android:id="@+id/structures"
+        android:name="com.shway.datastructures.Structures"
+        android:label="fragment_structures"
+        tools:layout="@layout/fragment_structures" />
+    <fragment
+        android:id="@+id/linkedList"
+        android:name="com.shway.datastructures.LinkedList"
+        android:label="fragment_linked_list"
+        tools:layout="@layout/fragment_linked_list">
+        <action
+            android:id="@+id/action_ll_sll"
+            app:destination="@id/singleLinkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_ll_dll"
+            app:destination="@id/doubleLinkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_ll_to_cll"
+            app:destination="@id/circularLinkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/queue"
+        android:name="com.shway.datastructures.Queue"
+        android:label="fragment_queue"
+        tools:layout="@layout/fragment_queue">
+        <action
+            android:id="@+id/action_q_qa"
+            app:destination="@id/queueArray"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_q_ql"
+            app:destination="@id/queueLinkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/hashTable"
+        android:name="com.shway.datastructures.HashTable"
+        android:label="fragment_hash_table"
+        tools:layout="@layout/fragment_hash_table" />
+    <fragment
+        android:id="@+id/graphs"
+        android:name="com.shway.datastructures.Graphs"
+        android:label="fragment_graphs"
+        tools:layout="@layout/fragment_graphs">
+        <action
+            android:id="@+id/action_g_bfs"
+            app:destination="@id/BFS"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_g_dfs"
+            app:destination="@id/DFS"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_g_ts"
+            app:destination="@id/topologicalSort"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/heap"
+        android:name="com.shway.datastructures.Heap"
+        android:label="fragment_heap"
+        tools:layout="@layout/fragment_heap">
+        <action
+            android:id="@+id/action_h_ho"
+            app:destination="@id/heapOperation"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/trees"
+        android:name="com.shway.datastructures.Trees"
+        android:label="fragment_trees"
+        tools:layout="@layout/fragment_trees">
+        <action
+            android:id="@+id/action_t_bt"
+            app:destination="@id/binaryTree"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_t_bst"
+            app:destination="@id/binarySearchTree"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_t_mwt"
+            app:destination="@id/multiwayTree"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_t_avl"
+            app:destination="@id/AVLTree"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_t_tt"
+            app:destination="@id/treeTraversal"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/arraySearch"
+        android:name="com.shway.datastructures.ArraySearch"
+        android:label="fragment_array_search"
+        tools:layout="@layout/fragment_array_search" />
+    <fragment
+        android:id="@+id/arraySort"
+        android:name="com.shway.datastructures.ArraySort"
+        android:label="fragment_array_sort"
+        tools:layout="@layout/fragment_array_sort" />
+    <fragment
+        android:id="@+id/AVLTree"
+        android:name="com.shway.datastructures.AVLTree"
+        android:label="fragment_avltree"
+        tools:layout="@layout/fragment_avltree" />
+    <fragment
+        android:id="@+id/BFS"
+        android:name="com.shway.datastructures.BFS"
+        android:label="fragment_bfs"
+        tools:layout="@layout/fragment_bfs" />
+    <fragment
+        android:id="@+id/binarySearchTree"
+        android:name="com.shway.datastructures.BinarySearchTree"
+        android:label="fragment_binary_search_tree"
+        tools:layout="@layout/fragment_binary_search_tree" />
+    <fragment
+        android:id="@+id/binaryTree"
+        android:name="com.shway.datastructures.BinaryTree"
+        android:label="fragment_binary_tree"
+        tools:layout="@layout/fragment_binary_tree" />
+    <fragment
+        android:id="@+id/circularLinkedList"
+        android:name="com.shway.datastructures.CircularLinkedList"
+        android:label="fragment_circular_linked_list"
+        tools:layout="@layout/fragment_circular_linked_list" />
+    <fragment
+        android:id="@+id/DFS"
+        android:name="com.shway.datastructures.DFS"
+        android:label="fragment_dfs"
+        tools:layout="@layout/fragment_dfs" />
+    <fragment
+        android:id="@+id/doubleLinkedList"
+        android:name="com.shway.datastructures.DoubleLinkedList"
+        android:label="fragment_double_linked_list"
+        tools:layout="@layout/fragment_double_linked_list" />
+    <fragment
+        android:id="@+id/heapOperation"
+        android:name="com.shway.datastructures.HeapOperation"
+        android:label="fragment_heap_operation"
+        tools:layout="@layout/fragment_heap_operation" />
+    <fragment
+        android:id="@+id/stack"
+        android:name="com.shway.datastructures.Stack"
+        android:label="fragment_stack"
+        tools:layout="@layout/fragment_stack">
+        <action
+            android:id="@+id/action_s_exp"
+            app:destination="@id/stackExpression"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_s_sa"
+            app:destination="@id/stackArray"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_s_ll"
+            app:destination="@id/stackLinkedList"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/multiwayTree"
+        android:name="com.shway.datastructures.MultiwayTree"
+        android:label="fragment_multiway_tree"
+        tools:layout="@layout/fragment_multiway_tree" />
+    <fragment
+        android:id="@+id/singleLinkedList"
+        android:name="com.shway.datastructures.SingleLinkedList"
+        android:label="fragment_single_linked_list"
+        tools:layout="@layout/fragment_single_linked_list" />
+    <fragment
+        android:id="@+id/queueArray"
+        android:name="com.shway.datastructures.QueueArray"
+        android:label="fragment_queue_array"
+        tools:layout="@layout/fragment_queue_array" />
+    <fragment
+        android:id="@+id/queueLinkedList"
+        android:name="com.shway.datastructures.QueueLinkedList"
+        android:label="fragment_queue_linked_list"
+        tools:layout="@layout/fragment_queue_linked_list" />
+    <fragment
+        android:id="@+id/stackArray"
+        android:name="com.shway.datastructures.StackArray"
+        android:label="fragment_stack_array"
+        tools:layout="@layout/fragment_stack_array" />
+    <fragment
+        android:id="@+id/stackExpression"
+        android:name="com.shway.datastructures.StackExpression"
+        android:label="fragment_stack_expression"
+        tools:layout="@layout/fragment_stack_expression" />
+    <fragment
+        android:id="@+id/stackLinkedList"
+        android:name="com.shway.datastructures.StackLinkedList"
+        android:label="fragment_stack_linked_list"
+        tools:layout="@layout/fragment_stack_linked_list" />
+    <fragment
+        android:id="@+id/topologicalSort"
+        android:name="com.shway.datastructures.TopologicalSort"
+        android:label="fragment_topological_sort"
+        tools:layout="@layout/fragment_topological_sort" />
+    <fragment
+        android:id="@+id/treeTraversal"
+        android:name="com.shway.datastructures.TreeTraversal"
+        android:label="fragment_tree_traversal"
+        tools:layout="@layout/fragment_tree_traversal" />
 </navigation>

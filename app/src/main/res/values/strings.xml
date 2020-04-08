@@ -30,12 +30,20 @@
 
     <string name="inbuilt_data_structures">Inbuilt Data Structures</string>
 
+    <string name="adt">Abstract Data Type (ADT)</string>
+
     <string name="adt_text">Abstract Data Types are defined by its behaviour from the point of view
         of the user of the data. It defines it in terms of possible values, operation on data, and
         the behaviour of these operations. \n\nThe definition of ADT only mentions what operations
         are to be performed but not how these operations will be implemented. It does not specify
         how the data is being handled under the hood, this is known as abstraction.</string>
 
+    <string name="arr_text">They stores elements of same type in a contiguous block of memory,
+        can accessed by a common identifier</string>
+
+    <string name="struct_txt">
+        They create a data type that can be used to group items of different types into a single type.
+    </string>
 
     <string name="ll_text">Consists of nodes, where each node poins to some other node forming a
         sequence.</string>
@@ -81,13 +89,13 @@
     </string>
 
 
-    <string name="arr_prop">\t\t1. An array is a data type which can store multiple values of same data type
+    <string name="arr_prop">1. An array is a data type which can store multiple values of same data type
         at a time.
-        \n\t\t2. The items are stored in continuous memory locations with a single
+        \n2. The items are stored in continuous memory locations with a single
         name.
-        \n\t\t3. Arrays cannot be resized dynamically. This may cause memory assigned to
+        \n3. Arrays cannot be resized dynamically. This may cause memory assigned to
         be wasted or insufficient.
-        \n\t\t4. The access time of each element is constant, that is O(1).</string>
+        \n4. The access time of each element is constant, that is O(1).</string>
 
     <string name="acc_arr">Access \nO(1)</string>
     <string name="search_arr">Search \nO(n)</string>
@@ -100,9 +108,9 @@
     <string name="declaring_ans_arr">An array must be declared before it can be used. Declaring an
         array involves specifying the following:\n\n
 
-        \t\t1. data type: the kind of values it can store, e.g, int, char, float
-        \n\t\t2. name: used to identify the array
-        \n\\tt3. size: maximum number of values the array can store
+        1. data type: the kind of values it can store, e.g, int, char, float
+        \n2. name: used to identify the array
+        \n3. size: maximum number of values the array can store
 
         \n\nThe syntax for declaring an array is as follows:</string>
 
@@ -132,7 +140,7 @@
 
     <string name="dec_2d_arr">Declaring a 2D Array</string>
 
-    <string name="dec_txt_2d">A 2D array can be declared using the follwing syntax:</string>
+    <string name="dec_txt_2d">A 2D array can be declared using the following syntax:</string>
 
     <string name="arr_syn_3">type name[row_size][column_size]</string>
 
@@ -175,8 +183,8 @@
         than NON-ZERO values. Sparse matrices are used generally because of 2 advantages they
         offer:\n\n
 
-        \t1. Save Space: by storing only the NON-ZERO elements
-        \n\t2. Save Computing Time: by storing the elements in way that is efficient for access.
+        1. Save Space: by storing only the NON-ZERO elements
+        \n2. Save Computing Time: by storing the elements in way that is efficient for access.
     </string>
 
     <string name="rep_sm">Representation of Sparse Matrix</string>
@@ -206,9 +214,9 @@
     <string name="arr_op">Array Operations</string>
 
     <string name="arr_op_txt">There are 3 basic operations that can be performed in arrays:\n\n
-        \t1. Deletion: for deleting an existing element.\n
-        \t2. Insertion: for adding a new element.\n
-        \t3. Access: for accessing an existing element.
+        1. Deletion: for deleting an existing element.\n
+        2. Insertion: for adding a new element.\n
+        3. Access: for accessing an existing element.
     </string>
 
     <string name="arr_op_read">Read about Insertion, Deletion and Access</string>
@@ -232,46 +240,50 @@
 
     <string name="insert_arr_txt">An insertion operation in an array requires us to know the
         index where the element is to be inserted.\n\n
-        \t1. If the element is at the end, then it could be directly entered at that position by
+        1. If the element is at the end, then it could be directly entered at that position by
         assigning it to that index.\n
-        \t2. If the position to be inserted is in-between already present elements of an array,
+        2. If the position to be inserted is in-between already present elements of an array,
         then we have to shift all the elements next to the element to be inserted one place after.
         This is a limitation of an array as the memory assigned to an array is continuous.
     </string>
 
-    <string name="arr_syn_7" formatted="false"><![CDATA[void insert_position(int arr[]) {
-    int i = 0, pos, num;
-    printf("Enter the number to be inserted : ");
-    scanf("%d", &num);
-    printf("Enter position at which the number is to be added :");
-    scanf("%d", &pos);
-    for (i = n-1; i>= pos; i—)
-        arr[i+1] = arr[i];
-    arr[pos] = num;
-    n = n + 1;
-    display_array(arr);
-}]]></string>
+    <string name="arr_syn_7" formatted="false"><![CDATA[
+    void insert_position(int arr[]) {\n
+    \tint i = 0, pos, num;\n
+    \tprintf(\"Enter the number to be inserted : \");\n
+    \tscanf(\"%d\", &num);\n
+    \tprintf(\"Enter position at which the number is to be added: \");\n
+    \tscanf(\"%d\", &pos);\n
+    \tfor (i = n-1; i>= pos; i—)\n
+    \t    \tarr[i+1] = arr[i];\n
+    \tarr[pos] = num;\n
+    \tn = n + 1;\n
+    \tdisplay_array(arr);\n
+}]]>\n
+    </string>
 
     <string name="delete_arr">2. Delete Operation</string>
 
     <string name="delete_arr_txt">This is similar to the insertion operation, we need to know
         the index of the element to be deleted.\n\n
 
-        \t1. If the element is at the end, then it could be directly deleted (or overwritten) at
+        1. If the element is at the end, then it could be directly deleted (or overwritten) at
         that position.\n
-        \t2. If the position to be deleted is in-between already present elements of an array,
+        2. If the position to be deleted is in-between already present elements of an array,
         then we have to shift all the elements next to the element to be deleted one place ahead.
     </string>
 
-    <string name="arr_syn_8" formatted="false"><![CDATA[void delete_position(int arr[]) {
-    int i, pos;
-    printf("\nEnter the position from which the number has to be deleted : ");
-    scanf("%d", &pos);
-    for (i = pos; i<n-1; i++)
-        arr[i] = arr[i+1];
-    n = n - 1; // decrease total number of used elements
-    display_array(arr);
-}]]></string>
+    <string name="arr_syn_8" formatted="false"><![CDATA[
+    void delete_position(int arr[]) {\n
+        int i, pos;\n
+        printf(\"Enter the position from which the number has to be deleted: \");\n
+        scanf(\"%d\", &pos);\n
+        for (i = pos; i<n-1; i++)\n
+            arr[i] = arr[i+1];\n
+        n = n - 1; // decrease total number of used elements\n
+        display_array(arr);\n
+}]]>\n
+    </string>
 
     <string name="access_arr">3. Access Operation</string>
 
@@ -282,29 +294,30 @@
 
     <string name="one_arr_txt">One-dimensional arrays could be accessed with one loop.</string>
 
-    <string name="arr_syn_9" formatted="false"><![CDATA[void display_oneD_array(int arr[100])
-{
-  int i;
-  for(i=0;i<n;i++)
-    printf("\n arr[%d] = %d", i, arr[i]);
-}]]></string>
+    <string name="arr_syn_9" formatted="false"><![CDATA[void display_oneD_array(int arr[100])\n
+{\n
+  int i;\n
+  for(i=0;i<n;i++)\n
+    printf(\"\n arr[%d] = %d\", i, arr[i]);\n
+}]]>\n
+    </string>
 
     <string name="mda_access_txt">A multi-dimensional array could be accessed by nesting
         multiple loops.</string>
 
-    <string name="arr_syn_10" formatted="false"><![CDATA[
-void display_twoD_array(int arr[100][100], int n)
-{
-  int i,j;
-  for(i=0;i<n;i++)
-  {
-    for(j=0;j<n;j++)
-    {
-      printf("arr[%d][%d] = %d", i,j, arr[i][j]);
-    }
-    printf("\n");
-  }
-}
+    <string name="arr_syn_10" formatted="false"><![CDATA[\n
+void display_twoD_array(int arr[100][100], int n)\n
+{\n
+  int i,j;\n
+  for(i=0;i<n;i++)\n
+  {\n
+    for(j=0;j<n;j++)\n
+    {\n
+      printf(\"arr[%d][%d] = %d\", i,j, arr[i][j]);\n
+    }\n
+    printf(\"\\n\");\n
+  }\n
+}\n
     ]]></string>
 
 
@@ -329,35 +342,35 @@ void display_twoD_array(int arr[100][100], int n)
 
     <string name="tc_arr">Average Time Complexity: O(n)</string>
 
-    <string name="arr_syn_11" formatted="false"><![CDATA[
-int main()
-{
-  int array[100], search, c, n;
-
-  printf("Enter number of elements in array\n");
-  scanf("%d", &n);
-
-  printf("Enter %d integer(s)\n", n);
-
-  for (c = 0; c < n; c++)
-    scanf("%d", &array[c]);
-
-  printf("Enter a number to search\n");
-  scanf("%d", &search);
-
-  for (c = 0; c < n; c++)
-  {
-    if (array[c] == search)
-    {
-      printf("%d is present at location %d.\n", search, c+1);
-      break;
-    }
-  }
-  if (c == n)
-    printf("%d isn't present in the array.\n", search);
-
-  return 0;
-}
+    <string name="arr_syn_11" formatted="false"><![CDATA[\n
+int main()\n
+{\n
+  int array[100], search, c, n;\n
+\n
+  printf(\"Enter number of elements in array\\n\");\n
+  scanf(\"%d\", &n);\n
+\n
+  printf(\"Enter %d integer(s)\\n\", n);\n
+\n
+  for (c = 0; c < n; c++)\n
+    scanf(\"%d\", &array[c]);\n
+\n
+  printf(\"Enter a number to search\\n\");\n
+  scanf(\"%d\", &search);\n
+\n
+  for (c = 0; c < n; c++)\n
+  {\n
+    if (array[c] == search)\n
+    {\n
+      printf(\"%d is present at location %d.\\n\", search, c+1);\n
+      break;\n
+    }\n
+  }\n
+  if (c == n)\n
+    printf(\"%d is not present in the array.\\n\", search);\n
+\n
+  return 0;\n
+}\n
     ]]></string>
 
     <string name="bs_arr">Binary Search</string>
@@ -377,42 +390,42 @@ int main()
     <string name="bs_tc">Average Time Complexity: O(log n)</string>
 
     <string name="arr_sun_12" formatted="false"><![CDATA[
-int main()
-{
-   int c, first, last, middle, n, search, array[100];
-
-   printf("Enter number of elements\n");
-   scanf("%d",&n);
-
-   printf("Enter all %d integers in sorted order\n", n);
-
-   for (c = 0; c < n; c++)
-      scanf("%d",&array[c]);
-
-   printf("Enter value to find\n");
-   scanf("%d", &search);
-
-   first = 0;
-   last = n - 1;
-   middle = (first+last)/2;
-
-   while (first <= last) {
-      if (array[middle] < search)
-         first = middle + 1;
-      else if (array[middle] == search) {
-         printf("%d found at location %d.\n", search, middle+1);
-         break;
-      }
-      else
-         last = middle - 1;
-
-      middle = (first + last)/2;
-   }
-   if (first > last)
-      printf("%d is not found in the array.\n", search);
-
-   return 0;
-}
+int main()\n
+{\n
+   int c, first, last, middle, n, search, array[100];\n
+\n
+   printf(\"Enter number of elements\\n\");\n
+   scanf(\"%d\",&n);\n
+\n
+   printf(\"Enter all %d integers in sorted order\\n\", n);\n
+\n
+   for (c = 0; c < n; c++)\n
+      scanf("%d",&array[c]);\n
+\n
+   printf(\"Enter value to find\\n\");\n
+   scanf(\"%d\", &search);\n
+\n
+   first = 0;\n
+   last = n - 1;\n
+   middle = (first+last)/2;\n
+\n
+   while (first <= last) {\n
+      if (array[middle] < search)\n
+         first = middle + 1;\n
+      else if (array[middle] == search) {\n
+         printf(\"%d found at location %d.\\n\", search, middle+1);\n
+         break;\n
+      }\n
+      else\n
+         last = middle - 1;\n
+\n
+      middle = (first + last)/2;\n
+   }\n
+   if (first > last)\n
+      printf(\"%d is not found in the array.\\n\", search);\n
+\n
+   return 0;\n
+}\n
     ]]></string>
 
 
@@ -451,37 +464,37 @@ int main()
         adjacent elements if they are in wrong order. The pass through the list is repeated until
         the list is sorted.\n\n
 
-        \tAverage Time Complexity: O(n ^ 2)\n
-        \tWorst Time Complexity: O(n ^ 2)\n
-        \tSpace Complexity: O(1)\n
-        \tStability: Stable\n
+        Average Time Complexity: O(n ^ 2)\n
+        Worst Time Complexity: O(n ^ 2)\n
+        Space Complexity: O(1)\n
+        Stability: Stable\n
     </string>
 
-    <string name="arr_syn_13" formatted="false"><![CDATA[
-int main()
-{
-  int a[20],n,i,j,temp;
-  printf("Enter the number of elements: ");
-  scanf("%d",&n);
-  printf("Enter the elements: ");
-
-  for(i=0;i<n;++i)
-    scanf("%d",&a[i]);
-
-  for (i = 1; i < n; i++)
-    for (j = 0; j < (n - i); j++)
-      if (a[j] > a[j+1])
-      {
-        temp = a[j];
-        a[j] = a[j+1];
-        a[j+1] = temp;
-      }
-
-  printf("\nArray after sorting: ");
-  for(i=0;i<n;++i)
-    printf("%d ",a[i]);
-  return 0;
-}
+    <string name="arr_syn_13" formatted="false"><![CDATA[\n
+int main()\n
+{\n
+  int a[20],n,i,j,temp;\n
+  printf(\"Enter the number of elements: \");\n
+  scanf(\"%d\",&n);\n
+  printf(\"Enter the elements: \");\n
+\n
+  for(i=0;i<n;++i)\n
+    scanf(\"%d\",&a[i]);\n
+\n
+  for (i = 1; i < n; i++)\n
+    for (j = 0; j < (n - i); j++)\n
+      if (a[j] > a[j+1])\n
+      {\n
+        temp = a[j];\n
+        a[j] = a[j+1];\n
+        a[j+1] = temp;\n
+      }\n
+\n
+  printf(\"\\nArray after sorting: \");\n
+  for(i=0;i<n;++i)\n
+    printf(\"%d \",a[i]);\n
+  return 0;\n
+}\n
     ]]></string>
 
     <string name="ins_sort">2. Insertion Sort</string>
@@ -490,10 +503,10 @@ int main()
         portion to sorted portion until all the elements are sorted in the list. An analogy of
         insertion sort is the sorting of a deck of cards with our hands.\n\n
 
-        \tAverage Time Complexity: O(n ^ 2)\n
-        \tWorst Time Complexity: O(n ^ 2)\n
-        \tSpace Complexity: O(1)\n
-        \tStability: Stable
+        Average Time Complexity: O(n ^ 2)\n
+        Worst Time Complexity: O(n ^ 2)\n
+        Space Complexity: O(1)\n
+        Stability: Stable
     </string>
 
     <string name="ins_sort_steps">
@@ -507,31 +520,31 @@ int main()
         the sorted list.
     </string>
 
-    <string name="arr_syn_14" formatted="false"><![CDATA[
-int main()
-{
-  int data[100],n,temp,i,j;
-  printf("Enter number of elements to be sorted:");
-  scanf("%d",&n);
-  printf("Enter elements: ");
-  for(i = 0; i < n; i++)
-    scanf("%d",&data[i]);
-  for(i = 1; i < n; i++)
-  {
-    temp = data[i];
-    j = i - 1;
-    while (temp < data[j] && j>=0)
-    {
-      data[j + 1] = data[j];
-      j = j - 1;
-    }
-    data[j + 1]=temp;
-  }
-  printf("Sorted array: ");
-  for(i = 0; i < n; i++)
-    printf("%d  ",data[i]);
-  return 0;
-}
+    <string name="arr_syn_14" formatted="false"><![CDATA[\n
+int main()\n
+{\n
+  int data[100],n,temp,i,j;\n
+  printf(\"Enter number of elements to be sorted:\");\n
+  scanf(\"%d\",&n);\n
+  printf(\"Enter elements: \");\n
+  for(i = 0; i < n; i++)\n
+    scanf(\"%d\",&data[i]);\n
+  for(i = 1; i < n; i++)\n
+  {\n
+    temp = data[i];\n
+    j = i - 1;\n
+    while (temp < data[j] && j>=0)\n
+    {\n
+      data[j + 1] = data[j];\n
+      j = j - 1;\n
+    }\n
+    data[j + 1]=temp;\n
+  }\n
+  printf(\"Sorted array: \");\n
+  for(i = 0; i < n; i++)\n
+    printf(\"%d  \",data[i]);\n
+  return 0;\n
+}\n
 
     ]]></string>
 
@@ -547,19 +560,19 @@ int main()
 
         After all iterations, the sorted sublist would be the required sorted list.\n\n
 
-        \tAverage Time Complexity: O(n ^ 2)\n
-        \tWorst Time Complexity: O(n ^ 2)\n
-        \tSpace Complexity: O(1)\n
-        \tStability: Unstable\n
+        Average Time Complexity: O(n ^ 2)\n
+        Worst Time Complexity: O(n ^ 2)\n
+        Space Complexity: O(1)\n
+        Stability: Unstable\n
 
     </string>
 
     <string name="sel_sort_steps">
-        \tStep 1: Select the first element of the list.\n
-        \tStep 2: Compare the selected element with all other elements in the list.\n
-        \tStep 3: For every comparison, if any element is smaller (or larger) than selected
+        Step 1: Select the first element of the list.\n
+        Step 2: Compare the selected element with all other elements in the list.\n
+        Step 3: For every comparison, if any element is smaller (or larger) than selected
         element, swap these two elements.\n
-        \tStep 4: Repeat the same procedure with next position in the list till the entire list
+        Step 4: Repeat the same procedure with next position in the list till the entire list
         is sorted.
     </string>
 
@@ -572,40 +585,40 @@ int main()
         in-place sort.
     </string>
 
-    <string name="arr_syn_15" formatted="false"><![CDATA[
-int main()
-{
-  int array[100], n, pos, temp, i, j;
-
-  printf("Enter number of elements\n");
-  scanf("%d", &n);
-
-  printf("Enter the %d values\n", n);
-
-  for (i = 0; i < n; i++)
-    scanf("%d", &array[i]);
-
-  for (i = 0; i < (n - 1); i++)
-  {
-    pos = i;
-    for (j = i + 1; j < n; j++)
-    {
-      if (array[pos] > array[j])
-        pos = j;
-    }
-    if (pos != i)
-    {
-      temp = array[i];
-      array[i] = array[pos];
-      array[pos] = temp;
-    }
-  }
-
-  printf("Sorted list in ascending order:\n");
-  for (i = 0; i < n; i++)
-    printf("%d\n", array[i]);
-  return 0;
-}
+    <string name="arr_syn_15" formatted="false"><![CDATA[\n
+int main()\n
+{\n
+  int array[100], n, pos, temp, i, j;\n
+\n
+  printf(\"Enter number of elements\\n\");\n
+  scanf(\"%d\", &n);\n
+\n
+  printf(\"Enter the %d values\\n\", n);\n
+\n
+  for (i = 0; i < n; i++)\n
+    scanf("%d", &array[i]);\n
+\n
+  for (i = 0; i < (n - 1); i++)\n
+  {\n
+    pos = i;\n
+    for (j = i + 1; j < n; j++)\n
+    {\n
+      if (array[pos] > array[j])\n
+        pos = j;\n
+    }\n
+    if (pos != i)\n
+    {\n
+      temp = array[i];\n
+      array[i] = array[pos];\n
+      array[pos] = temp;\n
+    }\n
+  }\n
+\n
+  printf(\"Sorted list in ascending order:\\n\");\n
+  for (i = 0; i < n; i++)\n
+    printf(\"%d\n\", array[i]);\n
+  return 0;\n
+}\n
     ]]></string>
 
     <string name="mer_sort">4. Merge Sort</string>
@@ -616,15 +629,15 @@ int main()
         It is a divide-and-conquer algorithm, which works by repeatedly dividing the array in
         small parts and merging them again in the sorted order required.\n\n
 
-        \tAverage Time Complexity: O(n log n)\n
-        \tWorst Time Complexity: O(n log n)\n
-        \tSpace Complexity: O(n)\n
-        \tStability: Stable\n
+        Average Time Complexity: O(n log n)\n
+        Worst Time Complexity: O(n log n)\n
+        Space Complexity: O(n)\n
+        Stability: Stable\n
     </string>
 
     <string name="mer_sort_steps">
-        \tStep 1: Divide the unsorted list into n sublists, each containing 1 element.\n
-        \tStep 2: Repeatedly merge sublists to produce new sorted sublists until there is only
+        Step 1: Divide the unsorted list into n sublists, each containing 1 element.\n
+        Step 2: Repeatedly merge sublists to produce new sorted sublists until there is only
         1 sublist remaining. This will be the sorted list.
     </string>
 
@@ -638,66 +651,66 @@ int main()
     </string>
 
     <string name="arr_syn_16" formatted="false">
-        <![CDATA[
-void merge(int a[], int i1, int j1, int i2, int j2)
-{
-  int temp[50];    // temporary array used
-  int i, j, k;
-  i = i1;          // beginning of the first list
-  j = i2;          // beginning of the second list
-  k = 0;
-
-  while (i <= j1 && j <= j2)    // while elements in both lists
-  {
-    if(a[i]<a[j])
-      temp[k++]=a[i++];
-    else
-      temp[k++]=a[j++];
-  }
-
-  while(i <= j1)     // copy remaining elements of the first list
-    temp[k++] = a[i++];
-
-  while(j<=j2)       // copy remaining elements of the second list
-    temp[k++]=a[j++];
-
-  // transfer elements from temp[] back to a[]
-  for(i = i1, j = 0; i <= j2; i++, j++)
-      a[i] = temp[j];
-}
-
-void mergesort(int a[], int i, int j)
-{
-  int mid;
-
-  if (i < j)
-  {
-    mid = (i+j)/2;
-    mergesort(a, i, mid);        //left recursion
-    mergesort(a, mid + 1, j);    //right recursion
-    merge(a, i, mid, mid + 1 ,j);    //merging of two sorted sub-arrays
-  }
-}
-
-int main()
-{
-  int a[30], n, i;
-  printf("Enter no of elements:");
-  scanf("%d", &n);
-  printf("Enter array elements:");
-
-  for(i = 0; i < n; i++)
-    scanf("%d", &a[i]);
-
-  mergesort(a, 0, n-1);
-
-  printf("\nSorted array is :");
-
-  for(i = 0; i < n; i++)
-    printf("%d ", a[i]);
-
-  return 0;
-}
+        <![CDATA[\n
+void merge(int a[], int i1, int j1, int i2, int j2)\n
+{\n
+  int temp[50];    // temporary array used\n
+  int i, j, k;\n
+  i = i1;          // beginning of the first list\n
+  j = i2;          // beginning of the second list\n
+  k = 0;\n
+\n
+  while (i <= j1 && j <= j2)    // while elements in both lists\n
+  {\n
+    if(a[i]<a[j])\n
+      temp[k++]=a[i++];\n
+    else\n
+      temp[k++]=a[j++];\n
+  }\n
+\n
+  while(i <= j1)     // copy remaining elements of the first list\n
+    temp[k++] = a[i++];\n
+\n
+  while(j<=j2)       // copy remaining elements of the second list\n
+    temp[k++]=a[j++];\n
+\n
+  // transfer elements from temp[] back to a[]\n
+  for(i = i1, j = 0; i <= j2; i++, j++)\n
+      a[i] = temp[j];\n
+}\n
+\n
+void mergesort(int a[], int i, int j)\n
+{\n
+  int mid;\n
+\n
+  if (i < j)\n
+  {\n
+    mid = (i+j)/2;\n
+    mergesort(a, i, mid);        //left recursion\n
+    mergesort(a, mid + 1, j);    //right recursion\n
+    merge(a, i, mid, mid + 1 ,j);    //merging of two sorted sub-arrays\n
+  }\n
+}\n
+\n
+int main()\n
+{\n
+  int a[30], n, i;\n
+  printf(\"Enter no of elements:\");\n
+  scanf("%d", &n);\n
+  printf(\"Enter array elements:\");\n
+\n
+  for(i = 0; i < n; i++)\n
+    scanf(\"%d\", &a[i]);\n
+\n
+  mergesort(a, 0, n-1);\n
+\n
+  printf(\"\\nSorted array is :\");\n
+\n
+  for(i = 0; i < n; i++)\n
+    printf(\"%d \", a[i]);\n
+\n
+  return 0;\n
+}\n
         ]]>
     </string>
 
@@ -708,21 +721,21 @@ int main()
         two smaller sublists based on a pivot chosen, into smaller and larger elements.
         Quicksort then recursively does this to the sublists finally  producing a sorted list.\n\n
 
-        \tAverage Time Complexity: O(n log n)\n
-        \tWorst Time Complexity: O(n ^ 2)\n
-        \tSpace Complexity: O(log n)\n
-        \tStability: Unstable\n
+        Average Time Complexity: O(n log n)\n
+        Worst Time Complexity: O(n ^ 2)\n
+        Space Complexity: O(log n)\n
+        Stability: Unstable\n
     </string>
 
     <string name="quick_sort_steps">
-        \tStep 1: Pick an element, called the pivot.\n
+        Step 1: Pick an element, called the pivot.\n
 
-        \tStep 2: Partitioning: reorder the array so that all elements with values less than
+        Step 2: Partitioning: reorder the array so that all elements with values less than
         the pivot come before the pivot, while all elements with values greater than the pivot
         come after it. After this partitioning, the pivot is in its final position. This is called
         the partition operation.\n
 
-        \tStep 3: Recursively apply the above steps to the sub-array of elements with smaller
+        Step 3: Recursively apply the above steps to the sub-array of elements with smaller
         values and separately to the sub-array of elements with greater values.\n
     </string>
 
@@ -742,59 +755,59 @@ int main()
     </string>
 
     <string name="arr_syn_17" formatted="false"><![CDATA[
-void swap(int a, int b)
-{
-  int t = a;
-  a = b;
-  b = t;
-}
-
-int partition (int arr[], int low, int high)
-{
-  int pivot = arr[high];    // pivot
-  int i = (low - 1);  // index of smaller element
-
-  for (int j = low; j <= high- 1; j++)
-  {
-    // if current element is smaller than the pivot
-    if (arr[j] < pivot)
-    {
-      i++;    // increment index of smaller element
-      swap(&arr[i], &arr[j]);
-    }
-  }
-  swap(&arr[i + 1], &arr[high]);
-  return (i + 1);
-}
-
-void quick_sort(int arr[], int low, int high)
-{
-  if (low < high)
-  {
-    int pi = partition(arr, low, high);
-    quick_sort(arr, low, pi - 1);
-    quick_sort(arr, pi + 1, high);
-  }
-}
-
-int main()
-{
-  int a[100], n, i;
-  printf("No. of elements to sort");
-  scanf("%d", &n);
-  printf("\nEnter the elements:\n");
-
-  for(i = 0; i < n; i++)
-    scanf("%d", &a[i]);
-
-  quick_sort(a, 0, n - 1);
-  printf("\nArray after sorting:");
-
-  for(i = 0; i < n; i++)
-    printf("%d ",a[i]);
-
-  return 0;
-}
+void swap(int a, int b)\n
+{\n
+  int t = a;\n
+  a = b;\n
+  b = t;\n
+}\n
+\n
+int partition (int arr[], int low, int high)\n
+{\n
+  int pivot = arr[high];    // pivot\n
+  int i = (low - 1);  // index of smaller element\n
+\n
+  for (int j = low; j <= high- 1; j++)\n
+  {\n
+    // if current element is smaller than the pivot\n
+    if (arr[j] < pivot)\n
+    {\n
+      i++;    // increment index of smaller element\n
+      swap(&arr[i], &arr[j]);\n
+    }\n
+  }\n
+  swap(&arr[i + 1], &arr[high]);\n
+  return (i + 1);\n
+}\n
+\n
+void quick_sort(int arr[], int low, int high)\n
+{\n
+  if (low < high)\n
+  {\n
+    int pi = partition(arr, low, high);\n
+    quick_sort(arr, low, pi - 1);\n
+    quick_sort(arr, pi + 1, high);\n
+  }\n
+}\n
+\n
+int main()\n
+{\n
+  int a[100], n, i;\n
+  printf(\"No. of elements to sort\");\n
+  scanf(\"%d\", &n);\n
+  printf(\"\\nEnter the elements:\\n\");\n
+\n
+  for(i = 0; i < n; i++)\n
+    scanf(\"%d\", &a[i]);\n
+\n
+  quick_sort(a, 0, n - 1);\n
+  printf(\"\\nArray after sorting:\");\n
+\n
+  for(i = 0; i < n; i++)\n
+    printf(\"%d \",a[i]);\n
+\n
+  return 0;\n
+}\n
     ]]></string>
 
 
@@ -822,12 +835,12 @@ int main()
     </string>
 
     <string name="struct_syn_1">
-        <![CDATA[
-struct student {
-    char name[100];
-    int roll_no;
-    int age;
-}
+        <![CDATA[\n
+struct student {\n
+    char name[100];\n
+    int roll_no;\n
+    int age;\n
+}\n
         ]]>
     </string>
 
@@ -837,16 +850,16 @@ struct student {
     </string>
 
     <string name="struct_syn_2">
-        <![CDATA[
-// define variable \'student1\' of type \'student\'
-struct student student1;
-
-// access using the dot notation
-student1.roll_no = 10;
-student1.age = 20;
-strcpy(student1.name,"Alexa");
-
-printf("%d", student1.roll_no);
+        <![CDATA[\n
+// define variable \'student1\' of type \'student\'\n
+struct student student1;\n
+\n
+// access using the dot notation\n
+student1.roll_no = 10;\n
+student1.age = 20;\n
+strcpy(student1.name,\"Alexa\");\n
+\n
+printf(\"%d\", student1.roll_no);\n
         ]]>
     </string>
 
@@ -861,13 +874,13 @@ printf("%d", student1.roll_no);
     </string>
 
     <string name="strucct_syn_3">
-        <![CDATA[
-struct Node
-{
-   int data;
-   struct Node *next;     // refers to itself
-}
-        ]]>
+        <![CDATA[\n
+struct Node\n
+{\n
+   int data;\n
+   struct Node *next;     // refers to itself\n
+}\n
+        ]]>\n
     </string>
 
     <!--Linked List-->
@@ -891,13 +904,13 @@ struct Node
     </string>
 
     <string name="ll_syn_1">
-        <![CDATA[
-struct node
-{
-  int data;
-  struct node *next;
-};
-        ]]>
+        <![CDATA[\n
+struct node\n
+{\n
+  int data;\n
+  struct node *next;\n
+};\n
+        ]]>\n
     </string>
 
     <string name="ll_over_arr">Advantages over an array</string>
@@ -984,25 +997,25 @@ struct node
     </string>
 
     <string name="ll_syn_2">
-        <![CDATA[
-void insertAtBeginning(int value)
-{
-   struct Node *newNode;
-   newNode = (struct Node*)malloc(sizeof(struct Node));
-   newNode -> data = value;
-   if(head == NULL)
-   {
-      newNode -> next = NULL;
-      head = newNode;
-   }
-   else
-   {
-      newNode -> next = head;
-      head = newNode;
-   }
-   printf("\nNode inserted successfully at beginning\n");
-}
-        ]]>
+        <![CDATA[\n
+void insertAtBeginning(int value)\n
+{\n
+   struct Node *newNode;\n
+   newNode = (struct Node*)malloc(sizeof(struct Node));\n
+   newNode -> data = value;\n
+   if(head == NULL)\n
+   {\n
+      newNode -> next = NULL;\n
+      head = newNode;\n
+   }\n
+   else\n
+   {\n
+      newNode -> next = head;\n
+      head = newNode;\n
+   }\n
+   printf("\nNode inserted successfully at beginning\n");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="ins_end">Inserting at End</string>
@@ -1018,25 +1031,25 @@ void insertAtBeginning(int value)
     </string>
 
     <string name="ll_syn_3">
-        <![CDATA[
-void insertAtEnd(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  newNode -> next = NULL;
-  if(head == NULL)
-    head = newNode;
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> next != NULL)
-      temp = temp -> next;
-    temp -> next = newNode;
-  }
-  printf("\nNode inserted successfully at end\n");
-}
-        ]]>
+        <![CDATA[\n
+void insertAtEnd(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  newNode -> next = NULL;\n
+  if(head == NULL)\n
+    head = newNode;\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> next != NULL)\n
+      temp = temp -> next;\n
+    temp -> next = newNode;\n
+  }\n
+  printf(\"\\nNode inserted successfully at end\\n\");\n
+}\n
+        ]]>\n
     </string>
 
 
@@ -1047,7 +1060,7 @@ void insertAtEnd(int value)
         Step 2: Check whether list is Empty (head == NULL).\n
         Step 3: If it is Empty then, set newNode → next = NULL and head = newNode.\n
         Step 4: If it is Not Empty then, define a node pointer temp and initialize with head.\n
-        Step 5: Keep moving the temp to its next node until it reaches to the node after which we 
+        Step 5: Keep moving the temp to its next node until it reaches to the node after which we
         want to insert the newNode (run a for-loop till position - 1).
         Step 6: Finally, Set newNode → next = temp → next and temp → next = newNode
     </string>
@@ -1059,23 +1072,23 @@ void insertPosition(int value, int pos)
   int i = 0;
   struct Node *newNode;
   newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(head == NULL)
-  {
-    newNode -> next = NULL;
-    head = newNode;
-  }
-  else {
-    struct Node *temp = head;
-    for (i = 0; i < pos - 1; i++) {
-      temp = temp -> next;
-    }
-    newNode -> next = temp -> next;
-    temp -> next = newNode;
-  }
-  printf("\nNode inserted successfully\n");
-}
-        ]]>
+  newNode -> data = value;\n
+  if(head == NULL)\n
+  {\n
+    newNode -> next = NULL;\n
+    head = newNode;\n
+  }\n
+  else {\n
+    struct Node *temp = head;\n
+    for (i = 0; i < pos - 1; i++) {\n
+      temp = temp -> next;\n
+    }\n
+    newNode -> next = temp -> next;\n
+    temp -> next = newNode;\n
+  }\n
+  printf(\"\\nNode inserted successfully\\n\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_beg">Deletion at Beginning</string>
@@ -1091,28 +1104,28 @@ void insertPosition(int value, int pos)
 
 
     <string name="ll_syn_5">
-        <![CDATA[
-void removeBeginning()
-{
-  if (head == NULL)
-	  printf("\n\nList is already Empty!");
-    else
-    {
-      struct Node *temp = head;
-      if (head -> next == NULL)
-      {
-	      head = NULL;
-	      free(temp);
-      }
-      else
-      {
-        head = temp -> next;
-        free(temp);
-        printf("\nNode deleted at the beginning\n\n");
-      }
-   }
-}
-        ]]>
+        <![CDATA[\n
+void removeBeginning()\n
+{\n
+  if (head == NULL)\n
+	  printf(\"\\n\\nList is already Empty!\");\n
+    else\n
+    {\n
+      struct Node *temp = head;\n
+      if (head -> next == NULL)\n
+      {\n
+	      head = NULL;\n
+	      free(temp);\n
+      }\n
+      else\n
+      {\n
+        head = temp -> next;\n
+        free(temp);\n
+        printf(\"\\nNode deleted at the beginning\\n\\n\");\n
+      }\n
+   }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_end">Deletion at End</string>
@@ -1131,30 +1144,30 @@ void removeBeginning()
         <![CDATA[
 void removeEnd()
 {
-  if(head == NULL)
-  {
-    printf("\nList is Empty\n");
-  }
-  else
-  {
-    struct Node *temp1 = head, *temp2;
-    if(head -> next == NULL)
-      head = NULL;
-    else
-    {
-      while(temp1 -> next != NULL)
-      {
-        temp2 = temp1;
-        temp1 = temp1 -> next;
-      }
-      temp2 -> next = NULL;
-    }
-    free(temp1);
-    printf("\nNode deleted at the end\n\n");
-  }
-}
-
-        ]]>
+  if(head == NULL)\n
+  {\n
+    printf(\"\\nList is Empty\\n\");\n
+  }\n
+  else\n
+  {\n
+    struct Node *temp1 = head, *temp2;\n
+    if(head -> next == NULL)\n
+      head = NULL;\n
+    else\n
+    {\n
+      while(temp1 -> next != NULL)\n
+      {\n
+        temp2 = temp1;\n
+        temp1 = temp1 -> next;\n
+      }\n
+      temp2 -> next = NULL;\n
+    }\n
+    free(temp1);\n
+    printf(\"\\nNode deleted at the end\\n\n\");\n
+  }\n
+}\n
+\n
+        ]]>\n
     </string>
 
     <string name="del_pos">Deletion at position</string>
@@ -1171,39 +1184,39 @@ void removeEnd()
     </string>
 
     <string name="ll_syn_7">
-        <![CDATA[
-void removePosition(int pos)
-{
-  int i, flag = 0;
-  struct Node *temp1 = head, *temp2;
-  if (pos == 1) {
-      head = temp1 -> next;
-      free(temp1);
-      printf("\nNode deleted\n\n");
-  }
-  else {
-    for (i = 0; i < pos - 1; i++)
-    {
-      if (temp1 -> next != NULL) {
-        temp2 = temp1;
-        temp1 = temp1 -> next;
-      }
-      else {
-        flag = 1;
-        break;
-      }
-    }
-    if (flag == 0) {
-      temp2 -> next = temp1 -> next;
-      free(temp1);
-      printf("\nNode deleted\n\n");
-    }
-    else {
-      printf("Position exceeds linked list. Please try again");
-    }
-  }
-}
-        ]]>
+        <![CDATA[\n
+void removePosition(int pos)\n
+{\n
+  int i, flag = 0;\n
+  struct Node *temp1 = head, *temp2;\n
+  if (pos == 1) {\n
+      head = temp1 -> next;\n
+      free(temp1);\n
+      printf(\"\\nNode deleted\\n\\n\");\n
+  }\n
+  else {\n
+    for (i = 0; i < pos - 1; i++)\n
+    {\n
+      if (temp1 -> next != NULL) {\n
+        temp2 = temp1;\n
+        temp1 = temp1 -> next;\n
+      }\n
+      else {\n
+        flag = 1;\n
+        break;\n
+      }\n
+    }\n
+    if (flag == 0) {\n
+      temp2 -> next = temp1 -> next;\n
+      free(temp1);\n
+      printf(\"\\nNode deleted\\n\\n\");\n
+    }\n
+    else {\n
+      printf(\"Position exceeds linked list. Please try again\");\n
+    }\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="dp_menu">Driver Program with Menu</string>
@@ -1212,46 +1225,46 @@ void removePosition(int pos)
         necessary header files and define the functions from above.</string>
 
     <string name="ll_syn_8" formatted="false">
-        <![CDATA[
-void main()
-{
-  int choice, value, choice1, pos, del;
-  while(1) {
-  printf("\n\n------ MENU ------\n");
-  printf("1. Insert at beginning\n2. Insert at End\n3. Insert at location\n4. Delete at beginning\n5. Delete at End\n6. Delete at location\n7. Display\n8. Exit\n\nEnter your choice:  ");
-  scanf("%d", &choice);
-  switch(choice)
-  {
-    case 1: printf("Enter the value to be insert: ");
-            scanf("%d", &value);
-            insertAtBeginning(value);
-            break;
-    case 2: printf("Enter the value to be insert: ");
-            scanf("%d", &value);
-            insertAtEnd(value);
-            break;
-    case 3: printf("Enter the value to be insert: ");
-            scanf("%d", &value);
-            printf("Enter the position after which you want to insert: ");
-            scanf("%d", &pos);
-            insertPosition(value, pos);
-            break;
-    case 4: removeBeginning();
-            break;
-    case 5: removeEnd();
-            break;
-    case 6: printf("Enter the value which you want to delete: ");
-            scanf("%d", &pos);
-            removePosition(pos);
-            break;
-    case 7: display();
-            break;
-    case 8: exit(0);
-    default: printf("\nWrong Input. Please try again!\n\n");
-    }
-  }
-}
-        ]]>
+        <![CDATA[\n
+void main()\n
+{\n
+  int choice, value, choice1, pos, del;\n
+  while(1) {\n
+  printf(\"\\n\\n------ MENU ------\\n\\");\n
+  printf(\"1. Insert at beginning\\n2. Insert at End\\n3. Insert at location\\n4. Delete at beginning\\n5. Delete at End\\n6. Delete at location\\n7. Display\\n8. Exit\\n\\nEnter your choice:  \");\n
+  scanf(\"%d\", &choice);\n
+  switch(choice)\n
+  {\n
+    case 1: printf(\"Enter the value to be insert: \");\n
+            scanf(\"%d\", &value);\n
+            insertAtBeginning(value);\n
+            break;\n
+    case 2: printf(\"Enter the value to be insert: ");\n
+            scanf(\"%d\", &value);\n
+            insertAtEnd(value);\n
+            break;\n
+    case 3: printf(\"Enter the value to be insert: \");\n
+            scanf(\"%d\", &value);\n
+            printf(\"Enter the position after which you want to insert: \");\n
+            scanf(\"%d\", &pos);\n
+            insertPosition(value, pos);\n
+            break;\n
+    case 4: removeBeginning();\n
+            break;\n
+    case 5: removeEnd();\n
+            break;\n
+    case 6: printf(\"Enter the value which you want to delete: \");\n
+            scanf("%d", &pos);\n
+            removePosition(pos);\n
+            break;\n
+    case 7: display();\n
+            break;\n
+    case 8: exit(0);\n
+    default: printf(\"\\nWrong Input. Please try again!\\n\\n\");\n
+    }\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <!--DOUBLY LINKED LIST-->
@@ -1271,27 +1284,27 @@ void main()
     </string>
 
     <string name="ll_syn_9">
-        <![CDATA[
-void insertAtBeginning(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  newNode -> previous = NULL;
-  if(head == NULL)
-  {
-    newNode -> next = NULL;
-    head = newNode;
-  }
-  else
-  {
-    newNode -> next = head;
-    head -> previous = newNode;
-    head = newNode;
-  }
-  printf("\nInsertion successful");
-}
-        ]]>
+        <![CDATA[\n
+void insertAtBeginning(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  newNode -> previous = NULL;\n
+  if(head == NULL)\n
+  {\n
+    newNode -> next = NULL;\n
+    head = newNode;\n
+  }\n
+  else\n
+  {\n
+    newNode -> next = head;\n
+    head -> previous = newNode;\n
+    head = newNode;\n
+  }\n
+  printf(\"\\nInsertion successful\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="ins_end_dll">
@@ -1304,29 +1317,29 @@ void insertAtBeginning(int value)
     </string>
 
     <string name="ll_syn_10">
-        <![CDATA[
-void insertAtEnd(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  newNode -> next = NULL;
-  if(head == NULL)
-  {
-    newNode -> previous = NULL;
-    head = newNode;
-  }
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> next != NULL)
-      temp = temp -> next;
-    temp -> next = newNode;
-    newNode -> previous = temp;
-  }
-  printf("\nInsertion successful");
-}
-        ]]>
+        <![CDATA[\n
+void insertAtEnd(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  newNode -> next = NULL;\n
+  if(head == NULL)\n
+  {\n
+    newNode -> previous = NULL;\n
+    head = newNode;\n
+  }\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> next != NULL)\n
+      temp = temp -> next;\n
+    temp -> next = newNode;\n
+    newNode -> previous = temp;\n
+  }\n
+  printf(\"\\nInsertion successful\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="ins_spec_dll">
@@ -1339,39 +1352,39 @@ void insertAtEnd(int value)
     </string>
 
     <string name="ll_syn_11">
-        <![CDATA[
-void insertAfter(int value, int pos)
-{
-  int i, flag = 1;
-  struct Node *newNode, *temp = head;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(head == NULL)
-  {
-    newNode -> previous = newNode -> next = NULL;
-    head = newNode;
-  }
-  else
-  {
-  for (i = 0; i < pos - 1; i++) {
-    temp = temp -> next;
-    if (temp -> next == NULL) {
-      flag = 0;
-      break;
-    }
-  }
-
-  if (flag) {
-    newNode -> next = temp -> next;
-    temp -> next -> previous = newNode;
-    temp -> next = newNode;
-    newNode -> previous = temp;
-    printf("\nInsertion successful\n");
-  }
-  else
-    printf("Number of elements is less than position entered");
-  }
-}
+        <![CDATA[\n
+void insertAfter(int value, int pos)\n
+{\n
+  int i, flag = 1;\n
+  struct Node *newNode, *temp = head;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if(head == NULL)\n
+  {\n
+    newNode -> previous = newNode -> next = NULL;\n
+    head = newNode;\n
+  }\n
+  else\n
+  {\n
+  for (i = 0; i < pos - 1; i++) {\n
+    temp = temp -> next;\n
+    if (temp -> next == NULL) {\n
+      flag = 0;\n
+      break;\n
+    }\n
+  }\n
+\n
+  if (flag) {\n
+    newNode -> next = temp -> next;\n
+    temp -> next -> previous = newNode;\n
+    temp -> next = newNode;\n
+    newNode -> previous = temp;\n
+    printf(\"\\nInsertion successful\\n\");\n
+  }\n
+  else\n
+    printf(\"Number of elements is less than position entered\");\n
+  }\n
+}\n
         ]]>
     </string>
 
@@ -1385,27 +1398,27 @@ void insertAfter(int value, int pos)
     </string>
 
     <string name="ll_syn_12">
-        <![CDATA[
-void deleteBeginning()
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp = head;
-    if(temp -> previous == temp -> next) {
-      head = NULL;
-      free(temp);
-    }
-    else {
-      head = temp -> next;
-      head -> previous = NULL;
-      free(temp);
-    }
-    printf("\nDeletion successful");
-  }
-}
-        ]]>
+        <![CDATA[\n
+void deleteBeginning()\n
+{\n
+  if(head == NULL)\n
+    printf("List is Empty");\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    if(temp -> previous == temp -> next) {\n
+      head = NULL;\n
+      free(temp);\n
+    }\n
+    else {\n
+      head = temp -> next;\n
+      head -> previous = NULL;\n
+      free(temp);\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_end_dll">
@@ -1419,28 +1432,28 @@ void deleteBeginning()
     </string>
 
     <string name="ll_syn_13">
-        <![CDATA[
-void deleteEnd()
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp = head;
-    if(temp -> previous == temp -> next) {
-      head = NULL;
-      free(temp);
-    }
-    else {
-      while(temp -> next != NULL)
-        temp = temp -> next;
-      temp -> previous -> next = NULL;
-      free(temp);
-    }
-    printf("\nDeletion successful");
-  }
-}
-        ]]>
+        <![CDATA[\n
+void deleteEnd()\n
+{\n
+  if(head == NULL)\n
+    printf(\"List is Empty\");\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    if(temp -> previous == temp -> next) {\n
+      head = NULL;\n
+      free(temp);\n
+    }\n
+    else {\n
+      while(temp -> next != NULL)\n
+        temp = temp -> next;\n
+      temp -> previous -> next = NULL;\n
+      free(temp);\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_spec_dll">
@@ -1459,83 +1472,83 @@ void deleteEnd()
     </string>
 
     <string name="ll_syn_14">
-        <![CDATA[
-void deleteSpecific(int delValue)
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> data != delValue)
-    {
-      if(temp -> next == NULL)
-      {
-        printf("\nGiven node is not found in the list");
-      }
-      else
-      {
-        temp = temp -> next;
-      }
-    }
-    if(temp == head)
-    {
-      head = NULL;
-      free(temp);
-    }
-    else
-    {
-      temp -> previous -> next = temp -> next;
-      free(temp);
-    }
-    printf("\nDeletion successful");
-  }
-}
+        <![CDATA[\n
+void deleteSpecific(int delValue)\n
+{\n
+  if(head == NULL)\n
+    printf(\"List is Empty\");\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> data != delValue)\n
+    {\n
+      if(temp -> next == NULL)\n
+      {\n
+        printf(\"\\nGiven node is not found in the list\");\n
+      }\n
+      else\n
+      {\n
+        temp = temp -> next;\n
+      }\n
+    }\n
+    if(temp == head)\n
+    {\n
+      head = NULL;\n
+      free(temp);\n
+    }\n
+    else\n
+    {\n
+      temp -> previous -> next = temp -> next;\n
+      free(temp);\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
         ]]>
     </string>
 
     <string name="ll_syn_15" formatted="false">
-        <![CDATA[
-void main()
-{
-  int choice, value, pos;
-  while(1)
-  {
-    printf("\nDoubly Linked List Operations\n");
-    printf("1. Insert at beginning\n2. Insert at End\n3. Insert at location\n4. Delete at beginning\n5. Delete at End\n6. Delete specific node\n7. Display\n8. Exit\n\nEnter your choice:  ");
-    scanf("%d",&choice);
-    switch(choice)
-    {
-      case 1: printf("Enter the value to be inserted: ");
-              scanf("%d",&value);
-              insertAtBeginning(value);
-              break;
-      case 2: printf("Enter the value to be inserted: ");
-              scanf("%d",&value);
-              insertAtEnd(value);
-              break;
-      case 3: printf("Enter the value to be inserted: ");
-              scanf("%d",&value);
-              printf("Enter the position after which you want to insert: ");
-              scanf("%d",&pos);
-              insertAfter(value,pos);
-              break;
-      case 4: deleteBeginning();
-              break;
-      case 5: deleteEnd();
-              break;
-      case 6: printf("Enter the Node value to be deleted: ");
-              scanf("%d",&pos);
-              deleteSpecific(pos);
-              break;
-      case 7: display();
-              break;
-      case 8: exit(0);
-      default: printf("\nWrong choice. Please try again\n");
-    }
-  }
-}
-        ]]>
+        <![CDATA[\n
+void main()\n
+{\n
+  int choice, value, pos;\n
+  while(1)\n
+  {\n
+    printf(\"\\nDoubly Linked List Operations\\n\");\n
+    printf(\"1. Insert at beginning\\n2. Insert at End\\n3. Insert at location\\n4. Delete at beginning\\n5. Delete at End\\n6. Delete specific node\\n7. Display\\n8. Exit\\n\\nEnter your choice:  \");\n
+    scanf(\"%d\",&choice);\n
+    switch(choice)\n
+    {\n
+      case 1: printf(\"Enter the value to be inserted: \");\n
+              scanf(\"%d\",&value);\n
+              insertAtBeginning(value);\n
+              break;\n
+      case 2: printf(\"Enter the value to be inserted: \");\n
+              scanf(\"%d\",&value);\n
+              insertAtEnd(value);\n
+              break;\n
+      case 3: printf(\"Enter the value to be inserted: \");\n
+              scanf(\"%d\",&value);\n
+              printf(\"Enter the position after which you want to insert: \");\n
+              scanf(\"%d\",&pos);\n
+              insertAfter(value,pos);\n
+              break;\n
+      case 4: deleteBeginning();\n
+              break;\n
+      case 5: deleteEnd();\n
+              break;\n
+      case 6: printf(\"Enter the Node value to be deleted: \");\n
+              scanf(\"%d\",&pos);\n
+              deleteSpecific(pos);\n
+              break;\n
+      case 7: display();\n
+              break;\n
+      case 8: exit(0);\n
+      default: printf("\nWrong choice. Please try again\n");\n
+    }\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <!-- CIRCULAR LINKED LIST-->
@@ -1565,29 +1578,29 @@ void main()
     </string>
 
     <string name="ll_syn_17">
-        <![CDATA[
-void insertAtBeginning(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(head == NULL)
-  {
-    head = newNode;
-    newNode -> next = head;
-  }
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> next != head)
-      temp = temp -> next;
-    newNode -> next = head;
-    head = newNode;
-    temp -> next = head;
-  }
-  printf("\nInsertion successful");
-}
-        ]]>
+        <![CDATA[\n
+void insertAtBeginning(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if(head == NULL)\n
+  {\n
+    head = newNode;\n
+    newNode -> next = head;\n
+  }\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> next != head)\n
+      temp = temp -> next;\n
+    newNode -> next = head;\n
+    head = newNode;\n
+    temp -> next = head;\n
+  }\n
+  printf(\"\\nInsertion successful\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="ins_end_cll">
@@ -1601,26 +1614,26 @@ void insertAtBeginning(int value)
 
 
     <string name="ll_syn_18">
-        void insertAtEnd(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(head == NULL)
-  {
-    head = newNode;
-    newNode -> next = head;
-  }
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> next != head)
-      temp = temp -> next;
-    temp -> next = newNode;
-    newNode -> next = head;
-  }
-  printf("\nInsertion successful");
-}
+        void insertAtEnd(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if(head == NULL)\n
+  {\n
+    head = newNode;\n
+    newNode -> next = head;\n
+  }\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> next != head)\n
+      temp = temp -> next;\n
+    temp -> next = newNode;\n
+    newNode -> next = head;\n
+  }\n
+  printf(\"\\nInsertion successful\");\n
+}\n
     </string>
 
     <string name="ins_spec_cll">
@@ -1635,38 +1648,38 @@ void insertAtBeginning(int value)
         Step 9: If temp is not last node then set newNode → next = temp → next and temp → next = newNode.\n
     </string>
 
-    <string name="ll_syn_19">
-        <![CDATA[
-void insertAfter(int value, int location)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(head == NULL)
-  {
-    head = newNode;
-    newNode -> next = head;
-  }
-  else
-  {
-    struct Node *temp = head;
-    while(temp -> data != location)
-    {
-      if(temp -> next == head)
-      {
-        printf("Given node is not found in the list");
-      }
-      else
-      {
-        temp = temp -> next;
-      }
-    }
-    newNode -> next = temp -> next;
-    temp -> next = newNode;
-    printf("\nInsertion successful");
-  }
-}
-        ]]>
+    <string name="ll_syn_19">\n
+        <![CDATA[\n
+void insertAfter(int value, int location)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if(head == NULL)\n
+  {\n
+    head = newNode;\n
+    newNode -> next = head;\n
+  }\n
+  else\n
+  {\n
+    struct Node *temp = head;\n
+    while(temp -> data != location)\n
+    {\n
+      if(temp -> next == head)\n
+      {\n
+        printf(\"Given node is not found in the list\");\n
+      }\n
+      else\n
+      {\n
+        temp = temp -> next;\n
+      }\n
+    }\n
+    newNode -> next = temp -> next;\n
+    temp -> next = newNode;\n
+    printf(\"\\nInsertion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_beg_cll">
@@ -1676,33 +1689,33 @@ void insertAfter(int value, int location)
         Step 4: Set last = temp, temp = head, head = head → next, last -> next = head and then free(temp).\n
     </string>
 
-    <string name="ll_syn_20">
-        <![CDATA[
-void deleteBeginning()
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp = head, *last = NULL;
-    if(temp -> next == head)
-    {
-      head = NULL;
-      free(temp);
-    }
-    else{
-      while(temp -> next != head)
-        temp = temp -> next;
-      last = temp;
-      temp = head;
-      head = head -> next;
-      free(temp);
-      last -> next = head;
-    }
-    printf("\nDeletion successful");
-  }
-}
-        ]]>
+    <string name="ll_syn_20">\n
+        <![CDATA[\n
+void deleteBeginning()\n
+{\n
+  if(head == NULL)\n
+    printf(\"List is Empty\");\n
+  else\n
+  {\n
+    struct Node *temp = head, *last = NULL;\n
+    if(temp -> next == head)\n
+    {\n
+      head = NULL;\n
+      free(temp);\n
+    }\n
+    else{\n
+      while(temp -> next != head)\n
+        temp = temp -> next;\n
+      last = temp;\n
+      temp = head;\n
+      head = head -> next;\n
+      free(temp);\n
+      last -> next = head;\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
 
@@ -1716,33 +1729,33 @@ void deleteBeginning()
         Step 7: Set temp2 → next = head and delete temp1.\n
     </string>
 
-    <string name="ll_syn_21">
-        <![CDATA[
-void deleteBeginning()
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp = head, *last = NULL;
-    if(temp -> next == head)
-    {
-      head = NULL;
-      free(temp);
-    }
-    else{
-      while(temp -> next != head)
-        temp = temp -> next;
-      last = temp;
-      temp = head;
-      head = head -> next;
-      free(temp);
-      last -> next = head;
-    }
-    printf("\nDeletion successful");
-  }
-}
-        ]]>
+    <string name="ll_syn_21">\n
+        <![CDATA[\n
+void deleteBeginning()\n
+{\n
+  if(head == NULL)\n
+    printf("List is Empty");\n
+  else\n
+  {\n
+    struct Node *temp = head, *last = NULL;\n
+    if(temp -> next == head)\n
+    {\n
+      head = NULL;\n
+      free(temp);\n
+    }\n
+    else{\n
+      while(temp -> next != head)\n
+        temp = temp -> next;\n
+      last = temp;\n
+      temp = head;\n
+      head = head -> next;\n
+      free(temp);\n
+      last -> next = head;\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="del_spec_cll">
@@ -1762,98 +1775,98 @@ void deleteBeginning()
 
     <string name="ll_syn_22">
         <![CDATA[
-void deleteSpecific(int delValue)
-{
-  if(head == NULL)
-    printf("List is Empty");
-  else
-  {
-    struct Node *temp1 = head, *temp2;
-    while(temp1 -> data != delValue)
-    {
-      if(temp1 -> next == head)
-      {
-        printf("\nGiven node is not found in the list");
-      }
-      else
-      {
-        temp2 = temp1;
-        temp1 = temp1 -> next;
-      }
-    }
-    if (temp1 -> next == head) {
-      head = NULL;
-      free(temp1);
-    }
-    else {
-      if(temp1 == head)
-      {
-        temp2 = head;
-        while(temp2 -> next != head)
-            temp2 = temp2 -> next;
-        head = head -> next;
-        temp2 -> next = head;
-        free(temp1);
-      }
-      else
-      {
-        if(temp1 -> next == head)
-        {
-          temp2 -> next = head;
-        }
-        else
-        {
-          temp2 -> next = temp1 -> next;
-        }
-        free(temp1);
-      }
-    }
-    printf("\nDeletion successful");
-  }
-}
-        ]]>
+void deleteSpecific(int delValue)\n
+{\n
+  if(head == NULL)\n
+    printf(\"List is Empty\");\n
+  else\n
+  {\n
+    struct Node *temp1 = head, *temp2;\n
+    while(temp1 -> data != delValue)\n
+    {\n
+      if(temp1 -> next == head)\n
+      {\n
+        printf(\"\\nGiven node is not found in the list\");\n
+      }\n
+      else\n
+      {\n
+        temp2 = temp1;\n
+        temp1 = temp1 -> next;\n
+      }\n
+    }\n
+    if (temp1 -> next == head) {\n
+      head = NULL;\n
+      free(temp1);\n
+    }\n
+    else {\n
+      if(temp1 == head)\n
+      {\n
+        temp2 = head;\n
+        while(temp2 -> next != head)\n
+            temp2 = temp2 -> next;\n
+        head = head -> next;\n
+        temp2 -> next = head;\n
+        free(temp1);\n
+      }\n
+      else\n
+      {\n
+        if(temp1 -> next == head)\n
+        {\n
+          temp2 -> next = head;\n
+        }\n
+        else\n
+        {\n
+          temp2 -> next = temp1 -> next;\n
+        }\n
+        free(temp1);\n
+      }\n
+    }\n
+    printf(\"\\nDeletion successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="ll_syn_23" formatted="false">
-    <![CDATA[
-void main()
-{
-  int choice,value,choice1,pos,del;
-  while(1) {
-    printf("\n\nCircular Linked List Menu\n");
-    printf("1. Insert at beginning\n2. Insert at End\n3. Insert at location\n4. Delete at beginning\n5. Delete at End\n6. Delete at location\n7. Display\n8. Exit\n\nEnter your choice:  ");
-    scanf("%d",&choice);
-    switch(choice)
-    {
-      case 1: printf("Enter the value to be insert: ");
-              scanf("%d", &value);
-              insertAtBeginning(value);
-              break;
-      case 2: printf("Enter the value to be insert: ");
-              scanf("%d", &value);
-              insertAtEnd(value);
-              break;
-      case 3: printf("Enter the value to be insert: ");
-              scanf("%d", &value);
-              printf("Enter the element after which you want to insert: ");
-              scanf("%d", &pos);
-              insertAfter(value, pos);
-              break;
-      case 4: deleteBeginning();
-              break;
-      case 5: deleteEnd();
-              break;
-      case 6: printf("Enter the element after which you want to delete: ");
-              scanf("%d", &pos);
-              deleteSpecific(pos);
-              break;
-      case 7: display();
-              break;
-      case 8: exit(0);
-      default: printf("\nWrong Choice\n\n");
-    }
-  }
-}
+    <![CDATA[\n
+void main()\n
+{\n
+  int choice,value,choice1,pos,del;\n
+  while(1) {\n
+    printf(\"\\n\\nCircular Linked List Menu\\n\");\n
+    printf(\"1. Insert at beginning\\n2. Insert at End\\n3. Insert at location\\n4. Delete at beginning\\n5. Delete at End\\n6. Delete at location\\n7. Display\\n8. Exit\\n\\nEnter your choice:  ");\n
+    scanf(\"%d\",&choice);\n
+    switch(choice)\n
+    {\n
+      case 1: printf(\"Enter the value to be insert: \");\n
+              scanf(\"%d\", &value);\n
+              insertAtBeginning(value);\n
+              break;\n
+      case 2: printf(\"Enter the value to be insert: \");\n
+              scanf(\"%d\", &value);\n
+              insertAtEnd(value);\n
+              break;\n
+      case 3: printf(\"Enter the value to be insert: \");\n
+              scanf(\"%d\", &value);\n
+              printf(\"Enter the element after which you want to insert: \");\n
+              scanf(\"%d\", &pos);\n
+              insertAfter(value, pos);\n
+              break;\n
+      case 4: deleteBeginning();\n
+              break;\n
+      case 5: deleteEnd();\n
+              break;\n
+      case 6: printf(\"Enter the element after which you want to delete: \");\n
+              scanf(\"%d\", &pos);\n
+              deleteSpecific(pos);\n
+              break;\n
+      case 7: display();\n
+              break;\n
+      case 8: exit(0);\n
+      default: printf(\"\\nWrong Choice\\n\\n\");\n
+    }\n
+  }\n
+}\n
 
     ]]>
 </string>
@@ -1875,7 +1888,7 @@ void main()
     <string name="exam_stack_txt">
         1. UNDO functionality in text editors: are based on a stack. Every change in the document is added to stack and upon an UNDO request, the last change is referred by popping it from the stack.\n\n
         2. Parentheses checker: the ordered manner of the stack could be used for checking the proper closing of parentheses. Every opening parentheses is pushed on to the stack and for every correct closing parentheses, it is popped off. Irregularities can then be detected if they mismatch.\n\n
-        3. Expression parsing: using stacks can help evaluate expressions faster using postfix or prefix notation. See the page below.\n\n
+        3. Expression parsing: using stacks can help evaluate expressions faster using postfix or prefix notation. See the page below.\n
     </string>
 
     <string name="exp_stack">Expression Parsing using Stacks</string>
@@ -1976,16 +1989,16 @@ Operators are evaluated left-to-right and brackets are superfluous. Operators ac
 
     <string name="stack_syn_1">
         <![CDATA[
-void push(int value){
-  if(top == SIZE-1)
-    printf("\nOverflow. Stack is Full");
-  else{
-    top++;
-    stack[top] = value;
-    printf("\nInsertion was successful");
-  }
-}
-
+void push(int value){\n
+  if(top == SIZE-1)\n
+    printf(\"\\nOverflow. Stack is Full\");\n
+  else{\n
+    top++;\n
+    stack[top] = value;\n
+    printf(\"\\nInsertion was successful\");\n
+  }\n
+}\n
+\n
         ]]>
     </string>
 
@@ -1999,77 +2012,77 @@ void push(int value){
 
     <string name="stack_syn_2">
 
-void pop(){
-  if(top == -1)
-    printf("\nUnderflow. Stack is empty");
-  else{
-    printf("\nDeleted : %d", stack[top]);
-    top—;
-  }
-}
+void pop(){\n
+  if(top == -1)\n
+    printf(\"\\nUnderflow. Stack is empty\");\n
+  else{\n
+    printf(\"\\nDeleted : %d\", stack[top]);\n
+    top—;\n
+  }\n
+}\n
 
     </string>
 
 
     <string name="stack_arr_menu">Please include the required header files and define SIZE to the required size of the stack to run the program.</string>
 
-    <string name="stack_syn_3" formatted="false"><![CDATA[
-
-int stack[SIZE], top = -1;
-
-void push(int value) {
-  if(top == SIZE-1)
-    printf("\nOverflow. Stack is Full");
-  else{
-    top++;
-    stack[top] = value;
-    printf("\nInsertion was successful");
-  }
-}
-
-void pop() {
-  if(top == -1)
-    printf("\nUnderflow. Stack is empty");
-  else{
-    printf("\nDeleted : %d", stack[top]);
-    top—;
-  }
-}
-
-void display() {
-  if(top == -1)
-    printf("\nStack is Empty!");
-  else{
-    int i;
-    printf("\nStack elements are:\n");
-    for(i=top; i>=0; i—)
-  printf("%d\n",stack[i]);
-  }
-}
-
-void main()
-{
-  int value, choice;
-  while(1) {
-    printf("\n\n------MENU-------\n");
-    printf("1. Push\n2. Pop\n3. Display\n4. Exit");
-    printf("\nEnter your choice: ");
-    scanf("%d",&choice);
-    switch(choice){
-      case 1: printf("Enter the value to be inserted: ");
-              scanf("%d",&value);
-              push(value);
-              break;
-      case 2: pop();
-              break;
-      case 3: display();
-              break;
-      case 4: exit(0);
-      default: printf("\nWrong selection, please try again.");
-    }
-  }
-}
-
+    <string name="stack_syn_3" formatted="false"><![CDATA[\n
+\n
+int stack[SIZE], top = -1;\n
+\n
+void push(int value) {\n
+  if(top == SIZE-1)\n
+    printf(\"\nOverflow. Stack is Full\");\n
+  else{\n
+    top++;\n
+    stack[top] = value;\n
+    printf(\"\\nInsertion was successful\");\n
+  }\n
+}\n
+\n
+void pop() {\n
+  if(top == -1)\n
+    printf(\"\\nUnderflow. Stack is empty\");\n
+  else{\n
+    printf(\"\\nDeleted : %d\", stack[top]);\n
+    top—;\n
+  }\n
+}\n
+\n
+void display() {\n
+  if(top == -1)\n
+    printf(\"\\nStack is Empty!\");\n
+  else{\n
+    int i;\n
+    printf(\"\\nStack elements are:\\n\");\n
+    for(i=top; i>=0; i—)\n
+  printf(\"%d\\n\",stack[i]);\n
+  }\n
+}\n
+\n
+void main()\n
+{\n
+  int value, choice;\n
+  while(1) {\n
+    printf(\"\\n\\n------MENU-------\\n\");\n
+    printf(\"1. Push\\n2. Pop\\n3. Display\\n4. Exit\");\n
+    printf(\"\\nEnter your choice: \");\n
+    scanf(\"%d\",&choice);\n
+    switch(choice){\n
+      case 1: printf(\"Enter the value to be inserted: \");\n
+              scanf(\"%d\",&value);\n
+              push(value);\n
+              break;\n
+      case 2: pop();\n
+              break;\n
+      case 3: display();\n
+              break;\n
+      case 4: exit(0);\n
+      default: printf(\"\\nWrong selection, please try again.\");\n
+    }\n
+  }\n
+}\n
+\n
 
 
     ]]></string>
@@ -2093,18 +2106,18 @@ void main()
     <string name="stack_syn_4">
         <![CDATA[
 void push(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if(top == NULL)
-    newNode -> next = NULL;
-  else
-    newNode -> next = top;
-  top = newNode;
-  printf("\nInsertion is Successful\n");
-}
-        ]]>
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if(top == NULL)\n
+    newNode -> next = NULL;\n
+  else\n
+    newNode -> next = top;\n
+  top = newNode;\n
+  printf(\"\\nInsertion is Successful\\n\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="stack_pop_ll">
@@ -2120,10 +2133,10 @@ void push(int value)
 void pop()
 {
   if (top == NULL)
-    printf("\nUnderflow. Stack is empty\n");
+    printf(\"\\nUnderflow. Stack is empty\\n\");
   else {
     struct Node *temp = top;
-    printf("\nDeleted element is: %d", temp -> data);
+    printf(\"\\nDeleted element is: %d\", temp -> data);
     top = temp -> next;
     free(temp);
   }
@@ -2132,76 +2145,76 @@ void pop()
     </string>
 
     <string name="stack_syn_6" formatted="false">
-        <![CDATA[
-struct Node
-{
-  int data;
-  struct Node *next;
-}*top = NULL;
-
-void push(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  if (top == NULL)
-    newNode -> next = NULL;
-  else
-    newNode -> next = top;
-  top = newNode;
-  printf("\nInsertion is Successful\n");
-}
-
-void pop()
-{
-  if(top == NULL)
-    printf("\nUnderflow. Stack is empty\n");
-  else {
-    struct Node *temp = top;
-    printf("\nDeleted element is: %d", temp -> data);
-    top = temp -> next;
-    free(temp);
-  }
-}
-
-void display()
-{
-  if(top == NULL)
-    printf("\nStack is Empty\n");
-  else {
-    struct Node *temp = top;
-    while (temp -> next != NULL){
-      printf("%d--->", temp -> data);
-      temp = temp -> next;
-    }
-    printf("%d--->NULL", temp -> data);
-  }
-}
-
-void main()
-{
-  int choice, value;
-  printf("\nStack using Linked ListS\n");
-  while(1) {
-    printf("\nStack using Linked Lists\n");
-    printf("1. Push\n2. Pop\n3. Display\n4. Exit\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-    switch(choice){
-    case 1: printf("Enter the value to be inserted: ");
-            scanf("%d", &value);
-            push(value);
-            break;
-    case 2: pop();
-            break;
-    case 3: display();
-            break;
-    case 4: exit(0);
-    default: printf("\nWrong selection, Please try again\n");
-    }
-  }
-}
-
+        <![CDATA[\n
+struct Node\n
+{\n
+  int data;\n
+  struct Node *next;\n
+}*top = NULL;\n
+\n
+void push(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  if (top == NULL)\n
+    newNode -> next = NULL;\n
+  else\n
+    newNode -> next = top;\n
+  top = newNode;\n
+  printf(\"\\nInsertion is Successful\\n\");\n
+}\n
+\n
+void pop()\n
+{\n
+  if(top == NULL)\n
+    printf("\\nUnderflow. Stack is empty\\n\");\n
+  else {\n
+    struct Node *temp = top;\n
+    printf(\"\\nDeleted element is: %d\", temp -> data);\n
+    top = temp -> next;\n
+    free(temp);\n
+  }\n
+}\n
+\n
+void display()\n
+{\n
+  if(top == NULL)\n
+    printf(\"\\nStack is Empty\\n\");\n
+  else {\n
+    struct Node *temp = top;\n
+    while (temp -> next != NULL){\n
+      printf(\"%d--->"\, temp -> data);\n
+      temp = temp -> next;\n
+    }\n
+    printf(\"%d--->NULL\", temp -> data);\n
+  }\n
+}\n
+\n
+void main()\n
+{\n
+  int choice, value;\n
+  printf(\"\\nStack using Linked ListS\\n\");\n
+  while(1) {\n
+    printf(\"\\nStack using Linked Lists\\n\");\n
+    printf(\"1. Push\\n2. Pop\\n3. Display\\n4. Exit\\n");\n
+    printf(\"Enter your choice: \");\n
+    scanf(\"%d\", &choice);\n
+    switch(choice){\n
+    case 1: printf(\"Enter the value to be inserted: \");\n
+            scanf(\"%d\", &value);\n
+            push(value);\n
+            break;\n
+    case 2: pop();\n
+            break;\n
+    case 3: display();\n
+            break;\n
+    case 4: exit(0);\n
+    default: printf(\"\\nWrong selection, Please try again\\n\");\n
+    }\n
+  }\n
+}\n
+\n
 
         ]]>
     </string>
@@ -2242,8 +2255,8 @@ void main()
     <string name="deque_txt">
         A deque is a list in which the elements can be inserted or deleted at either end. These are further of two types:\n\n
 
-        \t1. Input Restricted Queue: Where insertion takes place only from the rear end, deletion can take place from both ends.\n
-        \t2. Output Restricted Queue: Where deletion takes place from only the front, however insertion can take place from both ends.
+        1. Input Restricted Queue: Where insertion takes place only from the rear end, deletion can take place from both ends.\n
+        2. Output Restricted Queue: Where deletion takes place from only the front, however insertion can take place from both ends.
 
     </string>
 
@@ -2293,20 +2306,20 @@ This can be helped in operations where priority is important for executing opera
         Step 3: If it is NOT FULL, then increment rear value by one (rear++) and set queue[rear] = value.\n
     </string>
 
-    <string name="que_syn_1">
-        <![CDATA[
-void enQueue(int value){
-  if(rear == SIZE-1)
-    printf("\nOverflow. Queue is Full.");
-  else {
-    if(front == -1)
-  front = 0;
-    rear++;
-    queue[rear] = value;
-    printf("\nInsertion was successful");
-  }
-}
-        ]]>
+    <string name="que_syn_1">\n
+        <![CDATA[\n
+void enQueue(int value){\n
+  if(rear == SIZE-1)\n
+    printf(\"\\nOverflow. Queue is Full.\");\n
+  else {\n
+    if(front == -1)\n
+  front = 0;\n
+    rear++;\n
+    queue[rear] = value;\n
+    printf(\"\\nInsertion was successful\");\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="dequeue_oper">Dequeue Operation</string>
@@ -2319,80 +2332,80 @@ void enQueue(int value){
     </string>
 
     <string name="que_syn_2">
-        <![CDATA[
-void deQueue() {
-  if (front == rear)
-    printf("\nUnderflow. Queue is Empty.");
-  else {
-    printf("\nDeleted item is: %d", queue[front]);
-    front++;
-    if (front == rear)
-      front = rear = -1;
-  }
-}
-        ]]>
+        <![CDATA[\n
+void deQueue() {\n
+  if (front == rear)\n
+    printf(\"\\nUnderflow. Queue is Empty.\");\n
+  else {\n
+    printf(\"\\nDeleted item is: %d\", queue[front]);\n
+    front++;\n
+    if (front == rear)\n
+      front = rear = -1;\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <string name="que_syn_3" formatted="false">
-        <![CDATA[
-int queue[SIZE], front = -1, rear = -1;
-
-void enQueue(int value) {
-  if(rear == SIZE - 1)
-    printf("\nOverflow. Queue is Full.");
-  else {
-    if (front == -1)
-  front = 0;
-    rear++;
-    queue[rear] = value;
-    printf("\nInsertion was successful");
-  }
-}
-
-void deQueue() {
-  if (front == rear)
-    printf("\nUnderflow. Queue is Empty.");
-  else {
-    printf("\nDeleted item is: %d", queue[front]);
-    front++;
-    if (front == rear)
-      front = rear = -1;
-  }
-}
-
-void display() {
-  if(rear == -1)
-    printf("\nQueue is Empty!");
-  else {
-    int i;
-    printf("\nQueue elements are:\n");
-    for (i = front; i<=rear; i++)
-      printf("%d\t",queue[i]);
-  }
-}
-
-void main()
-{
-  int value, choice;
-  while(1) {
-    printf("\n----- Queue Using Arrays-----\n");
-    printf("1. Insertion\n2. Deletion\n3. Display\n4. Exit");
-    printf("\nEnter your choice: ");
-    scanf("%d",&choice);
-    switch(choice) {
-      case 1: printf("Enter the value to be inserted: ");
-              scanf("%d",&value);
-              enQueue(value);
-              break;
-      case 2: deQueue();
-              break;
-      case 3: display();
-              break;
-      case 4: exit(0);
-      default: printf("\nWrong selection, please try again");
-    }
-  }
-}
+        <![CDATA[\n
+int queue[SIZE], front = -1, rear = -1;\n
+\n
+void enQueue(int value) {\n
+  if(rear == SIZE - 1)\n
+    printf(\"\\nOverflow. Queue is Full.\");\n
+  else {\n
+    if (front == -1)\n
+  front = 0;\n
+    rear++;\n
+    queue[rear] = value;\n
+    printf(\"\\nInsertion was successful\");\n
+  }\n
+}\n
+\n
+void deQueue() {\n
+  if (front == rear)\n
+    printf(\"\\nUnderflow. Queue is Empty.\");\n
+  else {\n
+    printf(\"\\nDeleted item is: %d\", queue[front]);\n
+    front++;\n
+    if (front == rear)\n
+      front = rear = -1;\n
+  }\n
+}\n
+\n
+void display() {\n
+  if(rear == -1)\n
+    printf(\"\\nQueue is Empty!\");\n
+  else {\n
+    int i;\n
+    printf(\"\\nQueue elements are:\\n\");\n
+    for (i = front; i<=rear; i++)\n
+      printf(\"%d\",queue[i]);\n
+  }\n
+}\n
+\n
+void main()\n
+{\n
+  int value, choice;\n
+  while(1) {\n
+    printf(\"\\n----- Queue Using Arrays-----\\n\");\n
+    printf(\"1. Insertion\n2. Deletion\\n3. Display\\n4. Exit\");\n
+    printf(\"\\nEnter your choice: \");\n
+    scanf(\"%d\",&choice);\n
+    switch(choice) {\n
+      case 1: printf(\"Enter the value to be inserted: \");\n
+              scanf(\"%d\",&value);\n
+              enQueue(value);\n
+              break;\n
+      case 2: deQueue();\n
+              break;\n
+      case 3: display();\n
+              break;\n
+      case 4: exit(0);\n
+      default: printf(\"\\nWrong selection, please try again\");\n
+    }\n
+  }\n
+}\n
         ]]>
     </string>
 
@@ -2412,22 +2425,22 @@ void main()
     </string>
 
     <string name="que_syn_4">
-        <![CDATA[
-void enQueue(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  newNode -> next = NULL;
-  if (front == NULL)
-    front = rear = newNode;
-  else {
-    rear -> next = newNode;
-    rear = newNode;
-  }
-  printf("\nInsertion is Successful\n");
-}
-        ]]>
+        <![CDATA[\n
+void enQueue(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  newNode -> next = NULL;\n
+  if (front == NULL)\n
+    front = rear = newNode;\n
+  else {\n
+    rear -> next = newNode;\n
+    rear = newNode;\n
+  }\n
+  printf(\"\\nInsertion is Successful\\n\");\n
+}\n
+        ]]>\n
     </string>
 
     <string name="deque_ll">
@@ -2438,94 +2451,94 @@ void enQueue(int value)
     </string>
 
     <string name="que_syn_5">
-        <![CDATA[
-void deQueue()
-{
-   if (front == NULL)
-      printf("\nUnderflow. Queue is Empty\n");
-   else {
-      struct Node *temp = front;
-      front = front -> next;
-      printf("\nDeleted element: %d\n", temp -> data);
-      free(temp);
-   }
-}
+        <![CDATA[\n
+void deQueue()\n
+{\n
+   if (front == NULL)\n
+      printf(\"\\nUnderflow. Queue is Empty\\n\");\n
+   else {\n
+      struct Node *temp = front;\n
+      front = front -> next;\n
+      printf(\"\\nDeleted element: %d\\n\", temp -> data);\n
+      free(temp);\n
+   }\n
+}\n
         ]]>
     </string>
 
     <string name="que_syn_6" formatted="false">
-        <![CDATA[
-struct Node
-{
-   int data;
-   struct Node *next;
-}*front = NULL, *rear = NULL;
-
-void enQueue(int value)
-{
-  struct Node *newNode;
-  newNode = (struct Node*)malloc(sizeof(struct Node));
-  newNode -> data = value;
-  newNode -> next = NULL;
-  if (front == NULL)
-    front = rear = newNode;
-  else {
-    rear -> next = newNode;
-    rear = newNode;
-  }
-  printf("\nInsertion is Successful\n");
-}
-
-void deQueue()
-{
-  if (front == NULL)
-    printf("\nUnderflow. Queue is Empty\n");
-  else
-  {
-    struct Node *temp = front;
-    front = front -> next;
-    printf("\nDeleted element: %d\n", temp -> data);
-    free(temp);
-  }
-}
-
-void display()
-{
-  if (front == NULL)
-    printf("\nQueue is Empty!\n");
-  else {
-    struct Node *temp = front;
-    while (temp -> next != NULL) {
-      printf("%d--->", temp -> data);
-      temp = temp -> next;
-    }
-    printf("%d--->NULL\n", temp -> data);
-  }
-}
-
-void main()
-{
-  int choice, value;
-  while(1) {
-    printf("\nQueue using Linked List\n");
-    printf("1. Insert\n2. Delete\n3. Display\n4. Exit\n");
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-    switch(choice) {
-      case 1: printf("Enter the value to be inserted: ");
-              scanf("%d", &value);
-              enQueue(value);
-              break;
-      case 2: deQueue();
-              break;
-      case 3: display();
-              break;
-      case 4: exit(0);
-      default: printf("\nWrong choice. Please try again\n");
-    }
-  }
-}
-        ]]>
+        <![CDATA[\n
+struct Node\n
+{\n
+   int data;\n
+   struct Node *next;\n
+}*front = NULL, *rear = NULL;\n
+\n
+void enQueue(int value)\n
+{\n
+  struct Node *newNode;\n
+  newNode = (struct Node*)malloc(sizeof(struct Node));\n
+  newNode -> data = value;\n
+  newNode -> next = NULL;\n
+  if (front == NULL)\n
+    front = rear = newNode;\n
+  else {\n
+    rear -> next = newNode;\n
+    rear = newNode;\n
+  }\n
+  printf(\"\\nInsertion is Successful\\n\");\n
+}\n
+\n
+void deQueue()\n
+{\n
+  if (front == NULL)\n
+    printf(\"\\nUnderflow. Queue is Empty\\n\");\n
+  else\n
+  {\n
+    struct Node *temp = front;\n
+    front = front -> next;\n
+    printf(\"\\nDeleted element: %d\\n\", temp -> data);\n
+    free(temp);\n
+  }\n
+}\n
+\n
+void display()\n
+{\n
+  if (front == NULL)\n
+    printf(\"\\nQueue is Empty!\\n\");\n
+  else {\n
+    struct Node *temp = front;\n
+    while (temp -> next != NULL) {\n
+      printf(\"%d--->\", temp -> data);\n
+      temp = temp -> next;\n
+    }\n
+    printf(\"%d--->NULL\\n\", temp -> data);\n
+  }\n
+}\n
+\n
+void main()\n
+{\n
+  int choice, value;\n
+  while(1) {\n
+    printf(\"\\nQueue using Linked List\\n\");\n
+    printf(\"1. Insert\n2. Delete\n3. Display\\n4. Exit\\n\");\n
+    printf("Enter your choice: ");\n
+    scanf("%d", &choice);\n
+    switch(choice) {\n
+      case 1: printf(\"Enter the value to be inserted:\");\n
+              scanf(\"%d\", &value);\n
+              enQueue(value);\n
+              break;\n
+      case 2: deQueue();\n
+              break;\n
+      case 3: display();\n
+              break;\n
+      case 4: exit(0);\n
+      default: printf(\"\\nWrong choice. Please try again\\n\");\n
+    }\n
+  }\n
+}\n
+        ]]>\n
     </string>
 
     <!--Trees-->
@@ -2622,7 +2635,7 @@ void main()
     <string name="bt_arr_txt">The binary tree is represented in a 1-Dimensional array, as shown:</string>
     <!--Need an Image-->
     <string name="bt_ll">2. Linked List Representation</string>
-    <string name="bt_ll_txt">A doubly linked list is used to represent a binary tree. Here, every node consists of 3 fields. 
+    <string name="bt_ll_txt">A doubly linked list is used to represent a binary tree. Here, every node consists of 3 fields.
 
         \n\nFirst field for storing left child\'s address, second for storing data and third for storing right child\'s address.</string>
 
@@ -2656,74 +2669,74 @@ void main()
     <string name="insertion">Insertion</string>
     <string name="insertion_bst">
         To insert for a key in the tree, we follow the binary search property and insert accordingly.\n
-        \t1. Compare the key to be searched with the root’s key.\n
-        \t2. If the key is lesser than the root’s value, we return the left subtree of the node.\n
-        \t3. If the key is greater than the root’s value, we return the right subtree of the node.\n
-        \t4. This process is continued until we hit a leaf node. The new node is inserted to this location as a new node.\n
+        1. Compare the key to be searched with the root’s key.\n
+        2. If the key is lesser than the root’s value, we return the left subtree of the node.\n
+        3. If the key is greater than the root’s value, we return the right subtree of the node.\n
+        4. This process is continued until we hit a leaf node. The new node is inserted to this location as a new node.\n
     </string>
 
     <string name="deletion">Deletion</string>
     <string name="deletion_txt">
         When removing a node from a binary search tree it is mandatory to maintain the in-order sequence of the nodes. There are three possible cases to consider:\n\n
-        \t1. Deleting a node with no children: simply remove the node from the tree.\n
-        \t2. Deleting a node with one child: remove the node and replace it with its child.\n
-        \t3. Deleting a node with two children: First, we find the in-order successor of the node. Then the contents of this in-order successor are copied to the node to be deleted. Finally, the in-order successor is deleted.\n
+        1. Deleting a node with no children: simply remove the node from the tree.\n
+        2. Deleting a node with one child: remove the node and replace it with its child.\n
+        3. Deleting a node with two children: First, we find the in-order successor of the node. Then the contents of this in-order successor are copied to the node to be deleted. Finally, the in-order successor is deleted.\n
     </string>
 
 
     <string name="tree_syn_1">
-        <![CDATA[
-struct node
-{
-  int data;
-  struct node* left;
-  struct node* right;
-};
-
-struct node* createNode(value) {
-  struct node* newNode = malloc(sizeof(struct node));
-  newNode -> data = value;
-  newNode -> left = NULL;
-  newNode -> right = NULL;
-
-  return newNode;
-}
-
-struct node* insert(struct node* root, int data)
-{
-  if (root == NULL) 
-    return createNode(data);
-
-  if (data < root -> data)
-    root -> left  = insert(root -> left, data);
-  else if (data > root -> data)
-    root -> right = insert(root -> right, data);
-
-  return root;
-}
-
-void inorder(struct node* root){
-  if (root == NULL) return;
-  inorder(root -> left);
-  printf("%d ->", root -> data);
-  inorder(root -> right);
-}
-
-
-int main(){
-  struct node *root = NULL;
-  root = insert(root, 8);
-  insert(root, 4);
-  insert(root, 6);
-  insert(root, 3);
-  insert(root, 32);
-  insert(root, 13);
-  insert(root, 16);
-  insert(root, 2);
-
-  inorder(root);
-}  
-        ]]>
+        <![CDATA[\n
+struct node\n
+{\n
+  int data;\n
+  struct node* left;\n
+  struct node* right;\n
+};\n
+\n
+struct node* createNode(value) {\n
+  struct node* newNode = malloc(sizeof(struct node));\n
+  newNode -> data = value;\n
+  newNode -> left = NULL;\n
+  newNode -> right = NULL;\n
+\n
+  return newNode;\n
+}\n
+\n
+struct node* insert(struct node* root, int data)\n
+{\n
+  if (root == NULL)\n
+    return createNode(data);\n
+\n
+  if (data < root -> data)\n
+    root -> left  = insert(root -> left, data);\n
+  else if (data > root -> data)\n
+    root -> right = insert(root -> right, data);\n
+\n
+  return root;\n
+}\n
+\n
+void inorder(struct node* root){\n
+  if (root == NULL) return;\n
+  inorder(root -> left);\n
+  printf(\"%d ->\", root -> data);\n
+  inorder(root -> right);\n
+}\n
+\n
+\n
+int main(){\n
+  struct node *root = NULL;\n
+  root = insert(root, 8);\n
+  insert(root, 4);\n
+  insert(root, 6);\n
+  insert(root, 3);\n
+  insert(root, 32);\n
+  insert(root, 13);\n
+  insert(root, 16);\n
+  insert(root, 2);\n
+\n
+  inorder(root);\n
+}  \n
+        ]]>\n
     </string>
 
     <!--Multiway Tree-->
@@ -2798,10 +2811,10 @@ int main(){
     <string name="tree_rot">AVL Tree Rotations</string>
     <string name="tree_rot_txt">
         Rotation is the process of moving the nodes to either left or right to make tree balanced. There are 4 types of rotations:\n\n
-        \t1. Single Left Rotation (LL Rotation)\n
-        \t2. Single Right Rotation (RR Rotation)\n
-        \t3. Left Right Rotation (LR Rotation)\n
-        \t4. Right Left Rotation (RL Rotation)\n\n
+        1. Single Left Rotation (LL Rotation)\n
+        2. Single Right Rotation (RR Rotation)\n
+        3. Left Right Rotation (LR Rotation)\n
+        4. Right Left Rotation (RL Rotation)\n\n
         Understanding tree rotations would be hard in text form, please refer to the additional resources to understand them better.\n
     </string>
 
@@ -2833,15 +2846,15 @@ int main(){
 
     <string name="ins_heap">
         The new heap would not necessarily satisfy the heap property, we have to make it satisfy the heap property.\n\n
-        \tStep 1: Insert the node like in a normal tree.\n
-        \tStep 2: If the new Node is greater/lesser than its parent, swap it with it\'s parent.
+        Step 1: Insert the node like in a normal tree.\n
+        Step 2: If the new Node is greater/lesser than its parent, swap it with it\'s parent.
     </string>
 
     <string name="del_heap">
         An element is always deleted from the root of the heap. So, deleting an element from the heap is done in the following three steps:\n\n
-        \tStep 1: Replace the root node’s value with the last node’s value.\n
-        \tStep 2: Delete the last node.\n
-        \tStep 3: Sink down the new root node’s value so that the heap again satisfies the heap property.\n
+        Step 1: Replace the root node’s value with the last node’s value.\n
+        Step 2: Delete the last node.\n
+        Step 3: Sink down the new root node’s value so that the heap again satisfies the heap property.\n
     </string>
 
 
@@ -3010,20 +3023,20 @@ int main(){
 
     <string name="pseudo">Pseudocode</string>
     <string name="bsf_pseudo">
-        <![CDATA[
-  create a queue Q
-  label the starting_vertex as discovered
-  Q.enqueue(starting_vertex)
-  while Q is not empty:
-    v = Q.dequeue()
-    if v is the goal:
-      return v
-    for all edges from v to w in G.adjacentEdges(v) do
-      if w is not labeled as discovered:
-        label w as discovered
-        w.parent = v
-        Q.enqueue(w)
-        ]]>
+        <![CDATA[\n
+  create a queue Q\n
+  label the starting_vertex as discovered\n
+  Q.enqueue(starting_vertex)\n
+  while Q is not empty:\n
+    v = Q.dequeue()\n
+    if v is the goal:\n
+      return v\n
+    for all edges from v to w in G.adjacentEdges(v) do\n
+      if w is not labeled as discovered:\n
+        label w as discovered\n
+        w.parent = v\n
+        Q.enqueue(w)\n
+        ]]>\n
     </string>
 
     <!--DFS-->
@@ -3059,18 +3072,16 @@ int main(){
 
     <string name="pseudo_dfs">
         <![CDATA[
-procedure iterative-DFS(G,v):
-  create a stack S
-  S.push(v)
-  while S is not empty
-      v = S.pop()
-      if v is not labeled as discovered:
-          label v as discovered
-          for all edges from v to w in G.adjacentEdges(v) do
-              S.push(w)
-
-
-        ]]>
+procedure iterative-DFS(G,v):\n
+  create a stack S\n
+  S.push(v)\n
+  while S is not empty\n
+      v = S.pop()\n
+      if v is not labeled as discovered:\n
+          label v as discovered\n
+          for all edges from v to w in G.adjacentEdges(v) do\n
+              S.push(w)\n
+        ]]>\n
     </string>
 
 
@@ -3087,20 +3098,20 @@ procedure iterative-DFS(G,v):
 
     <string name="topo_algo">
         There are 2 algorithms for performing a topological sort.\n\n
-        \t1. Kahn\'s Algorithm
-        \t2. Using Depth First Search
+        1. Kahn\'s Algorithm
+        2. Using Depth First Search
     </string>
 
     <string name="khans">Kahn\'s Algorithm</string>
     <string name="khans_txt">
         Kahn\'s Algorithm works by finding vertices which have no incoming edges and removing all outgoing edges from these vertices. See the steps and visualisation for a better understanding.\n\n
 
-        \tStep 1: Compute in-degree for each of the vertex present in the DAG and initialize the count of visited nodes as 0.\n
-        \tStep 2: Pick all the vertices with in-degree as 0 and add them into a queue.\n
-        \tStep 3: Remove a vertex from the queue and then:\n
-            \t\t1. Decrease in-degree by 1 for all its neighboring nodes.\n
-            \t\t2. If in-degree of a neighboring nodes is reduced to zero, then add it to the queue.\n
-        \tStep 4: Repeat Step 3 until the queue is empty.\n
+        Step 1: Compute in-degree for each of the vertex present in the DAG and initialize the count of visited nodes as 0.\n
+        Step 2: Pick all the vertices with in-degree as 0 and add them into a queue.\n
+        Step 3: Remove a vertex from the queue and then:\n
+            1. Decrease in-degree by 1 for all its neighboring nodes.\n
+            2. If in-degree of a neighboring nodes is reduced to zero, then add it to the queue.\n
+        Step 4: Repeat Step 3 until the queue is empty.\n
     </string>
 
     <string name="dfs_app">Depth-first Search Approach</string>
