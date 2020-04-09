@@ -23,6 +23,7 @@ public class CTextViews {
         tv.setPadding(0,VALUE_IN_DP_8,0,0);
         Typeface typeface = ResourcesCompat.getFont(context, R.font.montserrat);
         tv.setTypeface(typeface);
+        tv.setLineSpacing(0,1.25f);
         return tv;
     }
 
@@ -106,6 +107,7 @@ public class CTextViews {
         tv.setTextSize(14);
         Typeface typeface = ResourcesCompat.getFont(context, R.font.montserrat);
         tv.setTypeface(typeface);
+        tv.setLineSpacing(0,1.25f);
         return tv;
     }
 }

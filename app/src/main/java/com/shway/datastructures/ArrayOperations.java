@@ -24,6 +24,7 @@ public class ArrayOperations extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Array Operations");
         View root = inflater.inflate(R.layout.fragment_array_operations, container, false);
         LinearLayout linearLayout = root.findViewById(R.id.arropr);
         CTextViews ctv = new CTextViews();

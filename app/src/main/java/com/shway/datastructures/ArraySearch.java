@@ -24,6 +24,7 @@ public class ArraySearch extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Searching In Arrays");
         View root = inflater.inflate(R.layout.fragment_array_search, container, false);
         LinearLayout linearLayout = root.findViewById(R.id.arrsearch);
         CTextViews ctv = new CTextViews();

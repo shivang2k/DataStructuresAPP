@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.shway.datastructures.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="DS&amp;A Handbook"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_arrayIntro"
@@ -77,7 +77,7 @@
     <fragment
         android:id="@+id/arrayIntro"
         android:name="com.shway.datastructures.ArrayIntro"
-        android:label="fragment_array_intro"
+        android:label="Arrays"
         tools:layout="@layout/fragment_array_intro" >
         <action
             android:id="@+id/action_arrayIntro_to_arrayOperations"
@@ -104,17 +104,17 @@
     <fragment
         android:id="@+id/arrayOperations"
         android:name="com.shway.datastructures.ArrayOperations"
-        android:label="fragment_array_operations"
+        android:label="Operations on Arrays"
         tools:layout="@layout/fragment_array_operations" />
     <fragment
         android:id="@+id/structures"
         android:name="com.shway.datastructures.Structures"
-        android:label="fragment_structures"
+        android:label="Structures"
         tools:layout="@layout/fragment_structures" />
     <fragment
         android:id="@+id/linkedList"
         android:name="com.shway.datastructures.LinkedList"
-        android:label="fragment_linked_list"
+        android:label="Linked List"
         tools:layout="@layout/fragment_linked_list">
         <action
             android:id="@+id/action_ll_sll"
@@ -141,7 +141,7 @@
     <fragment
         android:id="@+id/queue"
         android:name="com.shway.datastructures.Queue"
-        android:label="fragment_queue"
+        android:label="Queues"
         tools:layout="@layout/fragment_queue">
         <action
             android:id="@+id/action_q_qa"
@@ -161,12 +161,12 @@
     <fragment
         android:id="@+id/hashTable"
         android:name="com.shway.datastructures.HashTable"
-        android:label="fragment_hash_table"
+        android:label="Hash Tables"
         tools:layout="@layout/fragment_hash_table" />
     <fragment
         android:id="@+id/graphs"
         android:name="com.shway.datastructures.Graphs"
-        android:label="fragment_graphs"
+        android:label="Graphs"
         tools:layout="@layout/fragment_graphs">
         <action
             android:id="@+id/action_g_bfs"
@@ -193,7 +193,7 @@
     <fragment
         android:id="@+id/heap"
         android:name="com.shway.datastructures.Heap"
-        android:label="fragment_heap"
+        android:label="Heaps"
         tools:layout="@layout/fragment_heap">
         <action
             android:id="@+id/action_h_ho"
@@ -206,7 +206,7 @@
     <fragment
         android:id="@+id/trees"
         android:name="com.shway.datastructures.Trees"
-        android:label="fragment_trees"
+        android:label="Trees"
         tools:layout="@layout/fragment_trees">
         <action
             android:id="@+id/action_t_bt"
@@ -247,57 +247,57 @@
     <fragment
         android:id="@+id/arraySearch"
         android:name="com.shway.datastructures.ArraySearch"
-        android:label="fragment_array_search"
+        android:label="Searching in Arrays"
         tools:layout="@layout/fragment_array_search" />
     <fragment
         android:id="@+id/arraySort"
         android:name="com.shway.datastructures.ArraySort"
-        android:label="fragment_array_sort"
+        android:label="Sorting in Arrays"
         tools:layout="@layout/fragment_array_sort" />
     <fragment
         android:id="@+id/AVLTree"
         android:name="com.shway.datastructures.AVLTree"
-        android:label="fragment_avltree"
+        android:label="AVL Tree"
         tools:layout="@layout/fragment_avltree" />
     <fragment
         android:id="@+id/BFS"
         android:name="com.shway.datastructures.BFS"
-        android:label="fragment_bfs"
+        android:label="Breadth First Search"
         tools:layout="@layout/fragment_bfs" />
     <fragment
         android:id="@+id/binarySearchTree"
         android:name="com.shway.datastructures.BinarySearchTree"
-        android:label="fragment_binary_search_tree"
+        android:label="Binary Search Tree"
         tools:layout="@layout/fragment_binary_search_tree" />
     <fragment
         android:id="@+id/binaryTree"
         android:name="com.shway.datastructures.BinaryTree"
-        android:label="fragment_binary_tree"
+        android:label="Binary Tree"
         tools:layout="@layout/fragment_binary_tree" />
     <fragment
         android:id="@+id/circularLinkedList"
         android:name="com.shway.datastructures.CircularLinkedList"
-        android:label="fragment_circular_linked_list"
+        android:label="Circular Linked List"
         tools:layout="@layout/fragment_circular_linked_list" />
     <fragment
         android:id="@+id/DFS"
         android:name="com.shway.datastructures.DFS"
-        android:label="fragment_dfs"
+        android:label="Depth First Search"
         tools:layout="@layout/fragment_dfs" />
     <fragment
         android:id="@+id/doubleLinkedList"
         android:name="com.shway.datastructures.DoubleLinkedList"
-        android:label="fragment_double_linked_list"
+        android:label="Double Linked List"
         tools:layout="@layout/fragment_double_linked_list" />
     <fragment
         android:id="@+id/heapOperation"
         android:name="com.shway.datastructures.HeapOperation"
-        android:label="fragment_heap_operation"
+        android:label="Operations on Heaps"
         tools:layout="@layout/fragment_heap_operation" />
     <fragment
         android:id="@+id/stack"
         android:name="com.shway.datastructures.Stack"
-        android:label="fragment_stack"
+        android:label="Stacks"
         tools:layout="@layout/fragment_stack">
         <action
             android:id="@+id/action_s_exp"
@@ -324,46 +324,46 @@
     <fragment
         android:id="@+id/multiwayTree"
         android:name="com.shway.datastructures.MultiwayTree"
-        android:label="fragment_multiway_tree"
+        android:label="Multiway Tree"
         tools:layout="@layout/fragment_multiway_tree" />
     <fragment
         android:id="@+id/singleLinkedList"
         android:name="com.shway.datastructures.SingleLinkedList"
-        android:label="fragment_single_linked_list"
+        android:label="Single Linked List"
         tools:layout="@layout/fragment_single_linked_list" />
     <fragment
         android:id="@+id/queueArray"
         android:name="com.shway.datastructures.QueueArray"
-        android:label="fragment_queue_array"
+        android:label="Queues using Arrays"
         tools:layout="@layout/fragment_queue_array" />
     <fragment
         android:id="@+id/queueLinkedList"
         android:name="com.shway.datastructures.QueueLinkedList"
-        android:label="fragment_queue_linked_list"
+        android:label="Queues using Linked List"
         tools:layout="@layout/fragment_queue_linked_list" />
     <fragment
         android:id="@+id/stackArray"
         android:name="com.shway.datastructures.StackArray"
-        android:label="fragment_stack_array"
+        android:label="Stack using Array"
         tools:layout="@layout/fragment_stack_array" />
     <fragment
         android:id="@+id/stackExpression"
         android:name="com.shway.datastructures.StackExpression"
-        android:label="fragment_stack_expression"
+        android:label="Expression Parsing"
         tools:layout="@layout/fragment_stack_expression" />
     <fragment
         android:id="@+id/stackLinkedList"
         android:name="com.shway.datastructures.StackLinkedList"
-        android:label="fragment_stack_linked_list"
+        android:label="Stack using Linked List"
         tools:layout="@layout/fragment_stack_linked_list" />
     <fragment
         android:id="@+id/topologicalSort"
         android:name="com.shway.datastructures.TopologicalSort"
-        android:label="fragment_topological_sort"
+        android:label="Topological Soring"
         tools:layout="@layout/fragment_topological_sort" />
     <fragment
         android:id="@+id/treeTraversal"
         android:name="com.shway.datastructures.TreeTraversal"
-        android:label="fragment_tree_traversal"
+        android:label="Tree Traversal2"
         tools:layout="@layout/fragment_tree_traversal" />
 </navigation>

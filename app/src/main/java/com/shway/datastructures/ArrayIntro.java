@@ -39,6 +39,14 @@ public class ArrayIntro extends Fragment {
         CCardView ccv = new CCardView();
         Codes c = new Codes();
 
+//        try {
+//            GifDrawable gifFromResource = new GifDrawable( getResources(), R.drawable.ic_play_arrow_black_24dp);
+//            ImageView iv = new ImageView(container.getContext());
+//            iv.setImageDrawable(gifFromResource);
+//            linearLayout.addView(iv);
+//        }
+//        catch (Exception e){};
+
         //((MainActivity) getActivity()).setTitle("your title");
         View head = ctv.mainHead(getString(R.string.arr), container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_arr), container.getContext());

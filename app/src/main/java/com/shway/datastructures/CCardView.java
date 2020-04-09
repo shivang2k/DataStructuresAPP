@@ -2,6 +2,7 @@ package com.shway.datastructures;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.media.Image;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -113,6 +114,11 @@ public class CCardView {
                 .into(wv);
 
         return wv;
+    }
+
+    public View Image(Context context, Image img)
+    {
+        return new View(context);
     }
 
 }
