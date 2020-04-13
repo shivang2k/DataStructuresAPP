@@ -42,6 +42,8 @@ public class DoubleLinkedList extends Fragment {
 
         View head = ctv.mainHead("Doubly Linked List", container.getContext());
         //View text1 = ctv.normalText(getString(R.string.sll_what), container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.doubly_linked_list, "Doubly Linked List"));
+
         linearLayout.addView(head);
         //linearLayout.addView(text1);
 

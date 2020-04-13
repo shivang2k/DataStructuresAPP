@@ -43,6 +43,7 @@ public class SingleLinkedList extends Fragment {
 
         View head = ctv.mainHead("Singly Linked List", container.getContext());
         View text1 = ctv.normalText(getString(R.string.sll_what), container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.singly_linked_list, "Singly Linked List"));
         linearLayout.addView(head);
         linearLayout.addView(text1);
 

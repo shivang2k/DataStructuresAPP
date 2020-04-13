@@ -30,6 +30,9 @@ public class DFS extends Fragment {
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.depth_first_tree, "Order of nodes visited in DFS"));
+
+
         View head = ctv.mainHead("Depth-first search", container.getContext());
         View text = ctv.normalText(getString(R.string.dfs_what), container.getContext());
         linearLayout.addView(head);
@@ -54,6 +57,9 @@ public class DFS extends Fragment {
         View t4 = ctv.normalText(getString(R.string.steps_dfs_txt), container.getContext());
         linearLayout.addView(s4);
         linearLayout.addView(t4);
+
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.depth_first_search, "Depth first search algorithm animation"));
+
 
         View s5 = ctv.subHead(getString(R.string.pseudo), container.getContext());
         linearLayout.addView(s5);

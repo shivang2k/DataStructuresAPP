@@ -41,6 +41,7 @@ public class QueueArray extends Fragment {
 //
 //        linearLayout.addView();
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.queue_algorithm, "Queue using Array"));
 
         View head = ctv.mainHead("Queue using array", container.getContext());
         linearLayout.addView(head);

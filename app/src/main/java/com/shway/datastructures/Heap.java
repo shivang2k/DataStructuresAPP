@@ -32,6 +32,7 @@ public class Heap extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.heap);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_heap, "Max Heap and array indexing: Notice how parent is greater than its children"));
 
         View head = ctv.mainHead("Heaps", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_heap), container.getContext());
@@ -46,6 +47,8 @@ public class Heap extends Fragment {
         linearLayout.addView(subHead2);
         linearLayout.addView(text2);
 
+
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.heap_sort_example, "Sorting using heap sort"));
 
         CardView card1 = ccv.makeCardView(container.getContext());
 

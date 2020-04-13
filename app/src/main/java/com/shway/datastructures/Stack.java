@@ -45,6 +45,7 @@ public class Stack extends Fragment {
         View head = ctv.mainHead("Stack", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_stack), container.getContext());
         View text1 = ctv.normalText(getString(R.string.what_struct_txt), container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.stack_data_structure, "Stack"));
         linearLayout.addView(head);
         linearLayout.addView(subHead1);
         linearLayout.addView(text1);
@@ -85,6 +86,8 @@ public class Stack extends Fragment {
         View text3 = ctv.normalText(getString(R.string.prop_stack), container.getContext());
         linearLayout.addView(subHead3);
         linearLayout.addView(text3);
+
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.lifo_stack, "Pop and Push Operation"));
 
         View subHead4 = ctv.subHead(getString(R.string.stack_mani), container.getContext());
         linearLayout.addView(subHead4);

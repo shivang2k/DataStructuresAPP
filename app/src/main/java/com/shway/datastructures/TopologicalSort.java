@@ -29,6 +29,8 @@ public class TopologicalSort extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.ts);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.directed_acyclic_graph_2, "A directed acyclic graph on which topological sort is performed"));
+
 
         View head = ctv.mainHead("Topological Sorting", container.getContext());
         View text = ctv.normalText(getString(R.string.topo_txt), container.getContext());

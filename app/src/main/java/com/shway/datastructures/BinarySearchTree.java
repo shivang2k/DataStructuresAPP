@@ -31,6 +31,7 @@ public class BinarySearchTree extends Fragment {
         CCardView ccv = new CCardView();
         Codes c = new Codes();
         View head = ctv.mainHead("Binary Search Tree", container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_search_tree, "Binary search tree of size 9 and depth 3 with 8 at the root"));
         View text1 = ctv.normalText(getString(R.string.what_bst), container.getContext());
         linearLayout.addView(head);
         linearLayout.addView(text1);

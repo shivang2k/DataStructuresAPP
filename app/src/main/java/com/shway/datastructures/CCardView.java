@@ -2,7 +2,7 @@ package com.shway.datastructures;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.media.Image;
+import android.text.Html;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -16,6 +16,8 @@ import androidx.cardview.widget.CardView;
 
 import com.protectsoft.webviewcode.Codeview;
 import com.protectsoft.webviewcode.Settings;
+
+import pl.droidsonroids.gif.GifDrawable;
 
 public class CCardView {
 
@@ -65,7 +67,7 @@ public class CCardView {
         for(String x : a)
         {
             TextView tv = new TextView(context);
-            tv.setText(x);
+            tv.setText(Html.fromHtml(x));
             tv.setGravity(Gravity.CENTER_HORIZONTAL);
             tv.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -116,9 +118,62 @@ public class CCardView {
         return wv;
     }
 
-    public View Image(Context context, Image img)
+    public View Image(Context context, int img, String text)
     {
-        return new View(context);
+        LinearLayout ll = new LinearLayout(context);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        llp.gravity = Gravity.CENTER;
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ll.setLayoutParams(llp);
+        ll.setBackgroundColor(context.getColor(R.color.img));
+        ImageView iv = null;
+        final int VALUE_IN_DP_16 = (int)(16 * context.getResources().getDisplayMetrics().density);
+        ll.setPadding(VALUE_IN_DP_16,VALUE_IN_DP_16,VALUE_IN_DP_16, VALUE_IN_DP_16);
+        LinearLayout.LayoutParams llp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 600);
+
+        CTextViews ctv = new CTextViews();
+        try {
+            iv = new ImageView(context);
+            iv.setImageDrawable(context.getDrawable(img));
+            iv.setPadding(0,0,0, VALUE_IN_DP_16);
+            iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            iv.setAdjustViewBounds(true);
+        }
+        catch (Exception ignored){}
+        iv.setMaxHeight(600);
+        ll.addView(iv);
+        ll.addView(ctv.cardText2(text, context));
+        return ll;
+    }
+
+    public View Gif(Context context, int gif, String text)
+    {
+        LinearLayout ll = new LinearLayout(context);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        llp.gravity = Gravity.CENTER;
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ll.setLayoutParams(llp);
+        ll.setBackgroundColor(context.getColor(R.color.img));
+        ImageView iv = null;
+        LinearLayout.LayoutParams llp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 600);
+
+        final int VALUE_IN_DP_16 = (int)(16 * context.getResources().getDisplayMetrics().density);
+        ll.setPadding(VALUE_IN_DP_16,VALUE_IN_DP_16,VALUE_IN_DP_16, VALUE_IN_DP_16);
+        CTextViews ctv = new CTextViews();
+        try {
+            GifDrawable gifFromResource = new GifDrawable( context.getResources(), gif);
+            gifFromResource.setSpeed(1.5f);
+            iv = new ImageView(context);
+            iv.setImageDrawable(gifFromResource);
+            iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            iv.setPadding(0,0,0, VALUE_IN_DP_16);
+            iv.setAdjustViewBounds(true);
+        }
+        catch (Exception ignored){}
+        iv.setMaxHeight(600);
+        ll.addView(iv);
+        ll.addView(ctv.cardText2(text, context));
+        return ll;
     }
 
 }

@@ -31,6 +31,7 @@ public class AVLTree extends Fragment {
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
         Codes c = new Codes();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.avl_tree_balance, "AVL Tree with balance factors shown"));
         View head = ctv.mainHead("AVL Tree", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.avl), container.getContext());
         View text1 = ctv.normalText(getString(R.string.avl_txt ), container.getContext());
@@ -56,6 +57,7 @@ public class AVLTree extends Fragment {
         View text4 = ctv.normalText(getString(R.string.tree_rot_txt), container.getContext());
         linearLayout.addView(subHead4);
         linearLayout.addView(text4);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.avl_tree_example, "Rotation in an AVL Tree"));
 
         return root;
 

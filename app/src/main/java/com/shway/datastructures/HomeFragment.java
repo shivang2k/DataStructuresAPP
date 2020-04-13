@@ -38,9 +38,9 @@ public class HomeFragment extends Fragment{
 
 
         View arr = ccv.listItem(getString(R.string.arr_text), getString(R.string.arr),
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.grid, container.getContext());
         View struct = ccv.listItem(getString(R.string.struct_txt), getString(R.string.structure),
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.structure, container.getContext());
 
         arr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,19 +71,19 @@ public class HomeFragment extends Fragment{
 
 
         View ll = ccv.listItem(getString(R.string.ll_text), "Linked List",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.ll, container.getContext());
         View stack = ccv.listItem(getString(R.string.stack_text), "Stack",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.stack, container.getContext());
         View queue = ccv.listItem(getString(R.string.queue_text), "Queue",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.queue, container.getContext());
         View tree = ccv.listItem(getString(R.string.tree_text), "Tree",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.tree, container.getContext());
         View heap = ccv.listItem(getString(R.string.heap_text), "Heap",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.heap, container.getContext());
         View graph = ccv.listItem(getString(R.string.graph_text), "Graph",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.graph, container.getContext());
         View hash = ccv.listItem(getString(R.string.hash_text), "Hash Table",
-                R.mipmap.ic_launcher_round, container.getContext());
+                R.drawable.table, container.getContext());
 
         ll.setOnClickListener(new View.OnClickListener() {
             @Override

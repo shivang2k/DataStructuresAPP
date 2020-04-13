@@ -36,6 +36,7 @@ public class Trees extends Fragment {
         View head = ctv.mainHead("Trees", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_tree), container.getContext());
         View text1 = ctv.normalText(getString(R.string.what_tree_txt), container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_tree, "Tree"));
         linearLayout.addView(head);
         linearLayout.addView(subHead1);
         linearLayout.addView(text1);

@@ -29,7 +29,7 @@ public class BinaryTree extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.bt);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
-
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_tree, "Binary Tree"));
         View head = ctv.mainHead("Binary Tree", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_bt), container.getContext());
         View text1 = ctv.normalText(getString(R.string.what_bt_txt), container.getContext());
@@ -52,6 +52,7 @@ public class BinaryTree extends Fragment {
         linearLayout.addView(subHead4);
         linearLayout.addView(text4);
         // TODO: 06-04-2020 add image
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_tree_arr, "Array Representation"));
 
         View subHead5 = ctv.subHead(getString(R.string.bt_ll), container.getContext());
         View text5 = ctv.normalText(getString(R.string.bt_ll), container.getContext());
@@ -83,6 +84,7 @@ public class BinaryTree extends Fragment {
         View t4 = ctv.normalText(getString(R.string.tbt_txt), container.getContext());
         linearLayout.addView(ss4);
         linearLayout.addView(t4);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.threaded_tree, "Threaded Binary Tree"));
 
         return root;
 

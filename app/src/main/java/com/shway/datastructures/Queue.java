@@ -32,6 +32,7 @@ public class Queue extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.q);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.data_queue, "Queue and its Operations"));
 
         View head = ctv.mainHead("Queue", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_queue), container.getContext());
@@ -68,15 +69,21 @@ public class Queue extends Fragment {
         linearLayout.addView(subHead5);
         linearLayout.addView(text5);
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.restricted_queue, "Output restricted queue"));
+
+
         View subHead6 = ctv.subHead2(getString(R.string.priority), container.getContext());
         View text6 = ctv.normalText(getString(R.string.priority_txt), container.getContext());
         linearLayout.addView(subHead6);
         linearLayout.addView(text6);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.fifo_is, "Priority Queue"));
 
         View subHead7 = ctv.subHead2(getString(R.string.circular_qu), container.getContext());
         View text7 = ctv.normalText(getString(R.string.circular_qu_txt), container.getContext());
         linearLayout.addView(subHead7);
         linearLayout.addView(text7);
+
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.ring_buffer, "Circular Queue"));
 
         View subHead8 = ctv.subHead(getString(R.string.queue_mani), container.getContext());
         View text8 = ctv.normalText(getString(R.string.qu_mani_txt), container.getContext());

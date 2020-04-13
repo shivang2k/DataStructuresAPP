@@ -31,7 +31,7 @@ public class Graphs extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.graph);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
-
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.directed_acyclic_graph_2, "A directed graph"));
         View head = ctv.mainHead("Graphs", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_graph), container.getContext());
         View text1 = ctv.normalText(getString(R.string.what_graph_txt), container.getContext());
@@ -165,11 +165,13 @@ public class Graphs extends Fragment {
         View t20 = ctv.normalText(getString(R.string.sdjm_txt), container.getContext());
         linearLayout.addView(ss20);
         linearLayout.addView(t20);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.matrix_for_graph, "Adjacency Matrix for directed and undirected graphs"));
 
         View ss21 = ctv.subHead2(getString(R.string.adjl), container.getContext());
         View t21 = ctv.normalText(getString(R.string.adjl_txt), container.getContext());
         linearLayout.addView(ss21);
         linearLayout.addView(t21);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.adj_list, "Adjacency List undirected graph"));
 
 
         View ss22 = ctv.subHead(getString(R.string.gt), container.getContext());

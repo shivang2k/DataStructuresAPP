@@ -45,6 +45,7 @@ public class LinkedList extends Fragment {
         View head = ctv.mainHead("Linked List", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.ll_what), container.getContext());
         View text1 = ctv.normalText(getString(R.string.ll_what_txt), container.getContext());
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.singly_linked_list, "Linked List"));
         linearLayout.addView(head);
         linearLayout.addView(subHead1);
         linearLayout.addView(text1);

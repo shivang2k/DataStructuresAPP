@@ -41,6 +41,7 @@ public class QueueLinkedList extends Fragment {
 //
 //        linearLayout.addView();
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.qll, "Queue using Linked List"));
 
         View head = ctv.mainHead("Queue using Linked List", container.getContext());
         linearLayout.addView(head);

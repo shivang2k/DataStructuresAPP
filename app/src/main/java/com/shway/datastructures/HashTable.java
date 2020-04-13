@@ -34,6 +34,7 @@ public class HashTable extends Fragment {
         LinearLayout linearLayout = root.findViewById(R.id.ht);
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.ht2, "Simple Hash Table"));
 
         View head = ctv.mainHead("hash Tables", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.hash_what), container.getContext());
@@ -106,6 +107,8 @@ public class HashTable extends Fragment {
         linearLayout.addView(s10);
         linearLayout.addView(t10);
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.ht3, "Bucket Hashing"));
+
         View s11 = ctv.subHead(getString(R.string.col), container.getContext());
         View t11 = ctv.normalText(getString(R.string.col_txt), container.getContext());
         linearLayout.addView(s11);
@@ -120,6 +123,7 @@ public class HashTable extends Fragment {
         View t13 = ctv.normalText(getString(R.string.sep_txt), container.getContext());
         linearLayout.addView(s13);
         linearLayout.addView(t13);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.ht1, "Separate Chaining"));
         return root;
 
     }

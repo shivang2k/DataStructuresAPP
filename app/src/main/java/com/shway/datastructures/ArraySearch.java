@@ -58,11 +58,13 @@ public class ArraySearch extends Fragment {
         linearLayout.addView(subHead1);
         linearLayout.addView(text1);
         linearLayout.addView(ss1);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.linearsearch_valero, "Linear Search"));
         linearLayout.addView(codeView1);
 
         linearLayout.addView(subHead2);
         linearLayout.addView(text2);
         linearLayout.addView(ss2);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.binary_search_depiction, "Binary Search"));
         linearLayout.addView(codeView2);
 
 

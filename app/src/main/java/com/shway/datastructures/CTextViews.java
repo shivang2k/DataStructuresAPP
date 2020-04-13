@@ -1,7 +1,10 @@
 package com.shway.datastructures;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.text.Html;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,7 +18,7 @@ public class CTextViews {
         final int VALUE_IN_DP_8 = (int)(8 * context.getResources().getDisplayMetrics().density);
 
         TextView tv = new TextView(context);
-        tv.setText(text);
+        tv.setText(Html.fromHtml(text));
         tv.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -108,6 +111,24 @@ public class CTextViews {
         Typeface typeface = ResourcesCompat.getFont(context, R.font.montserrat);
         tv.setTypeface(typeface);
         tv.setLineSpacing(0,1.25f);
+        return tv;
+    }
+
+    public View cardText2(String text, Context context)
+    {
+        final int VALUE_IN_DP_8 = (int)(8 * context.getResources().getDisplayMetrics().density);
+        TextView tv = new TextView(context);
+        tv.setText(text);
+        tv.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        tv.setTextSize(16);
+        Typeface typeface = ResourcesCompat.getFont(context, R.font.montserrat);
+        tv.setTypeface(typeface);
+        tv.setLineSpacing(0,1.25f);
+        tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        tv.setGravity(Gravity.CENTER);
+        tv.setTextColor(Color.BLACK);
         return tv;
     }
 }

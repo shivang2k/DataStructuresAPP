@@ -30,6 +30,7 @@ public class BFS extends Fragment {
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.breadth_first_tree, "order of nodes visited in BFS"));
         View head = ctv.mainHead("Breadth-first search", container.getContext());
         View text = ctv.normalText(getString(R.string.bfs_what), container.getContext());
         linearLayout.addView(head);
@@ -54,6 +55,9 @@ public class BFS extends Fragment {
         View t4 = ctv.normalText(getString(R.string.steps_bfs_txt), container.getContext());
         linearLayout.addView(s4);
         linearLayout.addView(t4);
+
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.breadth_first_search_algorithm, "Breadth First search algorithm animation"));
+
 
         View s5 = ctv.subHead(getString(R.string.pseudo), container.getContext());
         linearLayout.addView(s5);

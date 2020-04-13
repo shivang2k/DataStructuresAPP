@@ -115,15 +115,18 @@ public class ArraySort extends Fragment {
         linearLayout.addView(text1);
         linearLayout.addView(ss1);
         linearLayout.addView(text2_1);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.bubble, "Bubble Sort Animation"));
         linearLayout.addView(codeView1);
 
         linearLayout.addView(subHead3);
         linearLayout.addView(text3);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.insertion_sort, "Insertion Sort Animation"));
         linearLayout.addView(ss3);
         linearLayout.addView(text4);
         linearLayout.addView(codeView2);
         linearLayout.addView(subHead4);
         linearLayout.addView(text5);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.selection_sort, "Selection Sort Animation"));
         linearLayout.addView(ss4);
         linearLayout.addView(text6);
         linearLayout.addView(ss5);
@@ -131,6 +134,7 @@ public class ArraySort extends Fragment {
         linearLayout.addView(codeView3);
         linearLayout.addView(subHead5);
         linearLayout.addView(text8);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.merge_sort, "Merge Sort Animation"));
         linearLayout.addView(ss6);
         linearLayout.addView(text9);
         linearLayout.addView(ss7);
@@ -138,6 +142,7 @@ public class ArraySort extends Fragment {
         linearLayout.addView(codeView4);
         linearLayout.addView(subHead6);
         linearLayout.addView(text11);
+        linearLayout.addView(ccv.Gif(container.getContext(), R.drawable.sorting_quicksort_anim, "Quick Sort Animation"));
         linearLayout.addView(ss8);
         linearLayout.addView(text12);
         linearLayout.addView(ss9);

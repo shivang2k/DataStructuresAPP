@@ -36,6 +36,7 @@ public class MultiwayTree extends Fragment {
         linearLayout.addView(head);
         linearLayout.addView(subHead1);
         linearLayout.addView(text1);
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.b_tree, "B-Tree of order 5"));
 
         View subHead2 = ctv.subHead(getString(R.string.bt), container.getContext());
         View text2 = ctv.normalText(getString(R.string.bt_what), container.getContext());
@@ -49,6 +50,7 @@ public class MultiwayTree extends Fragment {
         linearLayout.addView(text3);
 
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.bplustree, "B+ Tree"));
         View subHead4 = ctv.subHead(getString(R.string.bp), container.getContext());
         View text4 = ctv.normalText(getString(R.string.bp_txt), container.getContext());
         linearLayout.addView(subHead4);

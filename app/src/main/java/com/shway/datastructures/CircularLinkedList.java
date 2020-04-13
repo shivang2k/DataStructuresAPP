@@ -40,6 +40,7 @@ public class CircularLinkedList extends Fragment {
 //
 //        linearLayout.addView();
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.circularly_linked_list, "Circular Linked List"));
 
         View head = ctv.mainHead("Circular Linked List", container.getContext());
         View text1 = ctv.normalText(getString(R.string.what_cll), container.getContext());

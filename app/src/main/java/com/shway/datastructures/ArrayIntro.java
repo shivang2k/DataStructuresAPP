@@ -39,15 +39,9 @@ public class ArrayIntro extends Fragment {
         CCardView ccv = new CCardView();
         Codes c = new Codes();
 
-//        try {
-//            GifDrawable gifFromResource = new GifDrawable( getResources(), R.drawable.ic_play_arrow_black_24dp);
-//            ImageView iv = new ImageView(container.getContext());
-//            iv.setImageDrawable(gifFromResource);
-//            linearLayout.addView(iv);
-//        }
-//        catch (Exception e){};
 
-        //((MainActivity) getActivity()).setTitle("your title");
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.array1d, "A One Dimensional array"));
+
         View head = ctv.mainHead(getString(R.string.arr), container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.what_arr), container.getContext());
         View text1 = ctv.normalText(getString(R.string.ans_arr), container.getContext());
@@ -216,6 +210,7 @@ public class ArrayIntro extends Fragment {
 
         linearLayout.addView(codeView2);
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.array2d, "A 2D array"));
         linearLayout.addView(subHead6);
         linearLayout.addView(text6);
 
@@ -229,6 +224,7 @@ public class ArrayIntro extends Fragment {
 
         linearLayout.addView(codeView4);
 
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.row_and_column_major_order, "Row and column major order"));
         linearLayout.addView(subHead9);
         linearLayout.addView(text9);
 

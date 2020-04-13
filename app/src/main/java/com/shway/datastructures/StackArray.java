@@ -30,6 +30,7 @@ public class StackArray extends Fragment {
         CTextViews ctv = new CTextViews();
         CCardView ccv = new CCardView();
         Codes c = new Codes();
+        linearLayout.addView(ccv.Image(container.getContext(), R.drawable.lifo, "Stack operations using an array"));
 
         View head = ctv.mainHead("Stack Using Array", container.getContext());
         View subHead1 = ctv.subHead(getString(R.string.bef_imp), container.getContext());

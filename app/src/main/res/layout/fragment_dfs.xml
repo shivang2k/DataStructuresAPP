@@ -14,10 +14,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/dfs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:id="@+id/dfs"/>
+            android:padding="16dp"/>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
