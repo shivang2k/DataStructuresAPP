@@ -364,6 +364,6 @@
     <fragment
         android:id="@+id/treeTraversal"
         android:name="com.shway.datastructures.TreeTraversal"
-        android:label="Tree Traversal2"
+        android:label="Tree Traversal"
         tools:layout="@layout/fragment_tree_traversal" />
 </navigation>

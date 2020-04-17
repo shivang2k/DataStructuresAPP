@@ -6,23 +6,47 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/arrayIntro"
+            android:icon="@drawable/grid"
+            android:title="Arrays" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/structures"
+            android:icon="@drawable/structure"
+            android:title="Structures" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/linkedList"
+            android:icon="@drawable/ll"
+            android:title="Linked List" />
+        <item
+            android:id="@+id/stack"
+            android:icon="@drawable/stack"
+            android:title="Stack" />
+        <item
+            android:id="@+id/queue"
+            android:icon="@drawable/queue"
+            android:title="Queue" />
+        <item
+            android:id="@+id/trees"
+            android:icon="@drawable/tree"
+            android:title="Trees" />
+        <item
+            android:id="@+id/heap"
+            android:icon="@drawable/heap"
+            android:title="Heap" />
+        <item
+            android:id="@+id/graphs"
+            android:icon="@drawable/graph"
+            android:title="Graphs" />
+        <item
+            android:id="@+id/hashTable"
+            android:icon="@drawable/table"
+            android:title="HashTables" />
     </group>
 
-    <item android:title="Communicate">
+ <!--   <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -33,6 +57,6 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/menu_send" />
         </menu>
-    </item>
+    </item>-->
 
 </menu>

@@ -29,23 +29,23 @@ public class CCardView {
         CTextViews cTextViews = new CTextViews();
 
         final int VALUE_IN_DP_10 = (int)(10 * context.getResources().getDisplayMetrics().density);
-
+        final int VALUE_IN_DP_5 = (int)(5 * context.getResources().getDisplayMetrics().density);
         ll.addView(cTextViews.cardHead(head, context));
         ll.addView(cTextViews.cardText(txt, context));
         ll.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, VALUE_IN_DP_10, 0);
 
         iv.setImageResource(resID);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(140, 140);
         lp.gravity = Gravity.CENTER;
         iv.setLayoutParams(lp);
-
-        iv.setPadding(VALUE_IN_DP_10, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
+        iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        iv.setAdjustViewBounds(true);
+        iv.setPadding(VALUE_IN_DP_5, VALUE_IN_DP_10, 0, VALUE_IN_DP_10);
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-
         linearLayout.addView(iv);
         linearLayout.addView(ll);
+
         TypedValue outValue = new TypedValue();
         context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
         linearLayout.setBackgroundResource(outValue.resourceId);
@@ -107,6 +107,11 @@ public class CCardView {
 
     public View Code(Context context, String code)
     {
+        LinearLayout ll = new LinearLayout(context);
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        llp.gravity = Gravity.CENTER;
+        ll.setOrientation(LinearLayout.VERTICAL);
+        ll.setLayoutParams(llp);
         WebView wv = new WebView(context);
         wv.setBackgroundColor(Color.parseColor("#2b2b2b"));
         Codeview.with(context)
@@ -115,7 +120,10 @@ public class CCardView {
                 .setLang(Settings.Lang.CPLUSPLUS)
                 .into(wv);
 
-        return wv;
+        CTextViews cTextViews = new CTextViews();
+        ll.addView(cTextViews.subHead("Example Code",context));
+        ll.addView(wv);
+        return ll;
     }
 
     public View Image(Context context, int img, String text)

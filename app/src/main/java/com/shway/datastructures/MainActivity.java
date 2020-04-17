@@ -12,8 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-
-import io.github.kbiakov.codeview.classifier.CodeProcessor;
+import com.pixplicity.generate.Rate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        CodeProcessor.init(this);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -31,20 +29,26 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+                R.id.nav_home, R.id.arrayIntro, R.id.structures, R.id.linkedList,  R.id.stack,  R.id.queue,  R.id.trees,  R.id.graphs,  R.id.hashTable,  R.id.heap)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        Rate rate = new Rate.Builder(this)
+                // Trigger dialog after this many events (optional, defaults to 6)
+                .setTriggerCount(5)
+                // After dismissal, trigger again after this many events (optional, defaults to 30)
+                .setRepeatCount(5)
+                .setSnackBarParent(drawer)
+                .build();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
